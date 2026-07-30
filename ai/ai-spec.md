@@ -75,7 +75,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 
 | Feature | Spec Written | Code Complete | Verified vs R1 | Status |
 |---|---|---|---|---|
-| Setup & Deploy | [ ] | [ ] | [ ] | In Progress |
+| Setup & Deploy | [x] | [ ] | [ ] | In Progress |
 | Project Layout | [ ] | [ ] | [ ] | Pending |
 | Home Page | [ ] | [ ] | [ ] | Pending |
 | Portfolio Page | [ ] | [ ] | [ ] | Pending |
@@ -157,7 +157,7 @@ Both keys are injected at build time via GitHub Actions Secrets (`Settings → S
 
 - Vite 8 — build tool and dev server
 - ESLint 10 — linting
-- `@supabase/supabase-js` (to be installed)
+- `@supabase/supabase-js` (installed)
 - `react-router-dom` (to be installed)
 
 ---
@@ -177,7 +177,7 @@ damien-mccullor.github.io/
 ├── ai/
 │   ├── ai-spec.md                    — this file (global AI specification)
 │   └── features/
-│       ├── setup-deploy.feature.md
+│       ├── setup-deploy.feature.md   ✓ written
 │       ├── header-footer.feature.md
 │       ├── home-page.feature.md
 │       ├── portfolio-page.feature.md
@@ -209,7 +209,7 @@ damien-mccullor.github.io/
 │   ├── constants/
 │   │   └── brandColors.js            — brand palette — single source of truth for colors
 │   ├── lib/
-│   │   └── supabaseClient.js         — Supabase client instance
+│   │   └── supabaseClient.js         — Supabase client instance  ✓ created
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Portfolio.jsx
