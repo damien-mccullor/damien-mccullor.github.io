@@ -1,3 +1,15 @@
+# Instructor-provided documents (never commit)
+REQUIREMENTS.md
+REQUIREMENTS_2.md
+
+# Local working notes (never commit)
+.github/lessons-learned.md
+.github/users-lessons-learned.md
+
+# Temp files
+temp_copilot_instructions.md
+temp_copilot_instructions
+
 # Logs
 logs
 *.log
@@ -22,3 +34,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Docs
+docs/
