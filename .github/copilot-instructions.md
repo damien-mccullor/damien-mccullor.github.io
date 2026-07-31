@@ -92,8 +92,8 @@ feature/* → dev → main
 | `ai/ai-spec.md` | Global AI specification |
 | `ai/features/*.feature.md` | Per-feature specification docs |
 | `.github/workflows/deploy.yml` | CI/CD: build + deploy to GitHub Pages |
-| `.github/lessons-learned.md` | Agent-observed working patterns (gitignored) |
-| `.github/users-lessons-learned.md` | User workflow notes (gitignored) |
+| `.github/lessons-learned.md` | Instructor/coach feedback only (gitignored) |
+| `.github/users-lessons-learned.md` | Agent-observed patterns and user-caught discrepancies (gitignored) |
 
 ---
 
@@ -284,6 +284,13 @@ Before removing any of the following, issue an **"Out of Standard"** warning to 
 - **README.md** must contain: Project Title + Description, Tech Stack, Project Structure (folder tree), Installation/Setup Instructions, Environment Variables, Author.
 - **`.env`** is gitignored — the README must name it explicitly, show all required keys with placeholder values, and state it must be created from scratch.
 - README must be verified against the actual codebase before every commit that touches it: library names match `package.json`, `.env` presence matches `.gitignore`, all setup steps are reproducible on a fresh clone.
+
+**README Deferral Rule:** If README is not built during a feature's pre-commit check, the agent must:
+1. Explicitly state: `"README deferred — must be completed before dev → main merge."`
+2. Uncheck the README item in `ai/ai-spec.md` Definition of Done if it was checked.
+3. Add a `[ ] README.md built and verified` item to the pre-merge checklist reminder at that point in the conversation.
+
+**Deferral is not silent.** A deferred README that is never revisited is a submission failure. This happened in a prior module.
 
 ---
 

@@ -1,121 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+/*
+ * LOGIC BRIEFING:
+ * App — Root route configuration
+ * Defines all client-side routes using react-router-dom.
+ * All page components are lazy-loaded for route-level code splitting (Lighthouse baseline).
+ * Every route renders inside Layout, which provides the persistent Header and Footer.
+ * Login and BackOffice are routable but excluded from the nav links in Header.
+ * No Supabase calls. No state.
+ */
 
+import { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+
+/* SECTION: LAZY PAGE IMPORTS — code split per route */
+const Home       = lazy(() => import('./pages/Home'))
+const Portfolio  = lazy(() => import('./pages/Portfolio'))
+const Links      = lazy(() => import('./pages/Links'))
+const Contact    = lazy(() => import('./pages/Contact'))
+const Login      = lazy(() => import('./pages/Login'))
+const BackOffice = lazy(() => import('./pages/BackOffice'))
+
+/* SECTION: COMPONENT */
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <Layout>
+      {/* SECTION: SUSPENSE — fallback shown while a page chunk loads */}
+      <Suspense fallback={<div className="page-loading">Loading…</div>}>
+        <Routes>
+          {/* SECTION: PUBLIC ROUTES */}
+          <Route path="/"          element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/links"     element={<Links />} />
+          <Route path="/contact"   element={<Contact />} />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+          {/* SECTION: SECRET / PROTECTED ROUTES — not in navigation */}
+          <Route path="/login"      element={<Login />} />
+          <Route path="/backoffice" element={<BackOffice />} />
+        </Routes>
+      </Suspense>
+    </Layout>
   )
 }
 

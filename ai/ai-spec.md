@@ -61,7 +61,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | # | Feature | Spec File | Status |
 |---|---|---|---|
 | 1 | Setup & Deploy | `ai/features/setup-deploy.feature.md` | In Progress |
-| 2 | Project Layout (Header / Footer) | `ai/features/header-footer.feature.md` | Pending |
+| 2 | Project Layout (Header / Footer) | `ai/features/header-footer.feature.md` | Complete |
 | 3 | Home Page | `ai/features/home-page.feature.md` | Pending |
 | 4 | Portfolio Page | `ai/features/portfolio-page.feature.md` | Pending |
 | 5 | Link Page | `ai/features/link-page.feature.md` | Pending |
@@ -76,7 +76,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Feature | Spec Written | Code Complete | Verified vs R1 | Status |
 |---|---|---|---|---|
 | Setup & Deploy | [x] | [ ] | [ ] | In Progress |
-| Project Layout | [ ] | [ ] | [ ] | Pending |
+| Project Layout | [x] | [x] | [ ] | In Progress |
 | Home Page | [ ] | [ ] | [ ] | Pending |
 | Portfolio Page | [ ] | [ ] | [ ] | Pending |
 | Link Page | [ ] | [ ] | [ ] | Pending |
@@ -157,8 +157,8 @@ Both keys are injected at build time via GitHub Actions Secrets (`Settings → S
 
 - Vite 8 — build tool and dev server
 - ESLint 10 — linting
+- `react-router-dom` (installed)
 - `@supabase/supabase-js` (installed)
-- `react-router-dom` (to be installed)
 
 ---
 
@@ -178,7 +178,7 @@ damien-mccullor.github.io/
 │   ├── ai-spec.md                    — this file (global AI specification)
 │   └── features/
 │       ├── setup-deploy.feature.md   ✓ written
-│       ├── header-footer.feature.md
+│       ├── header-footer.feature.md  ✓ written
 │       ├── home-page.feature.md
 │       ├── portfolio-page.feature.md
 │       ├── link-page.feature.md
@@ -201,11 +201,20 @@ damien-mccullor.github.io/
 │   ├── robots.txt                    — SEO; User-agent: * Allow: /
 │   └── resume.pdf                    — downloadable CV (Portfolio page)
 ├── src/
-│   ├── assets/                       — AI-generated images and static media
+│   ├── assets/
+│   │   ├── black-background/
+│   │   │   ├── BWG.png              — header logo (AI-generated: Gemini, ChatGPT, Copilot)
+│   │   │   ├── BGFF.png             — footer logo (AI-generated)
+│   │   │   └── [other variants]
+│   │   └── white_background/
+│   │       └── [white bg variants]
 │   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Footer.jsx
-│   │   └── Layout.jsx
+│   │   ├── Header.jsx             ✓ created
+│   │   ├── Header.css
+│   │   ├── Footer.jsx             ✓ created
+│   │   ├── Footer.css
+│   │   ├── Layout.jsx             ✓ created
+│   │   └── Layout.css
 │   ├── constants/
 │   │   └── brandColors.js            — brand palette — single source of truth for colors
 │   ├── lib/

@@ -1,0 +1,114 @@
+/* Header — desktop sticky bar and mobile bottom nav */
+
+/* SECTION: DESKTOP HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+/* SECTION: LOGO EMBLEM — circular clip around the logo image */
+.header__logo-emblem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  background-color: #111111;
+  transition: background-color 0.2s;
+}
+
+.header__nav-link:hover {
+  background-color: #2a2a2a;
+}
+
+.header__nav-link--active {
+  background-color: #111111;
+  opacity: 0.75;
+}
+
+/* SECTION: MOBILE BOTTOM NAV */
+.mobile-nav {
+  display: none;
+}
+
+/* SECTION: RESPONSIVE — 768px breakpoint per R1 */
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    z-index: 100;
+  }
+
+  .mobile-nav__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+  }
+
+  .mobile-nav__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-nav__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-nav__item--active .mobile-nav__icon svg {
+    fill: #FFD700; /* accent — matches brandColors.accent */
+  }
+
+  /* Prevent page content from sitting behind the fixed mobile nav */
+  .layout__main {
+    padding-bottom: 56px;
+  }
+}
