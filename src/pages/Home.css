@@ -1,0 +1,157 @@
+/* Home page styles */
+
+/* SECTION: INTRODUCTION */
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  gap: 1rem;
+}
+
+.home__name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home__tagline {
+  font-size: 1.25rem;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.home__bio {
+  max-width: 640px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SECTION: TECHNICAL SKILLS */
+.home__skills {
+  padding: 4rem 2rem;
+}
+
+.home__section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.home__skill-category {
+  margin-bottom: 2.5rem;
+}
+
+.home__category-label {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+}
+
+.home__skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.home__skill-card {
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.home__skill-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.home__skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.home__skill-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* SECTION: SOFT SKILLS */
+.home__soft-skills {
+  padding: 4rem 2rem;
+}
+
+.home__soft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home__soft-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.home__soft-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home__soft-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.home__soft-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* SECTION: AI-GENERATED IMAGES */
+.home__image-figure--full {
+  margin: 0;
+}
+
+.home__image--full {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* SECTION: RESPONSIVE */
+@media (max-width: 768px) {
+  .home__name {
+    font-size: 2rem;
+  }
+
+  .home__tagline {
+    font-size: 1rem;
+  }
+
+  .home__skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home__soft-grid {
+    grid-template-columns: 1fr;
+  }
+}

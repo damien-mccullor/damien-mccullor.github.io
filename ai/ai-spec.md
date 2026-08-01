@@ -60,9 +60,9 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 
 | # | Feature | Spec File | Status |
 |---|---|---|---|
-| 1 | Setup & Deploy | `ai/features/setup-deploy.feature.md` | In Progress |
+| 1 | Setup & Deploy | `ai/features/setup-deploy.feature.md` | Complete |
 | 2 | Project Layout (Header / Footer) | `ai/features/header-footer.feature.md` | Complete |
-| 3 | Home Page | `ai/features/home-page.feature.md` | Pending |
+| 3 | Home Page | `ai/features/home-page.feature.md` | Complete |
 | 4 | Portfolio Page | `ai/features/portfolio-page.feature.md` | Pending |
 | 5 | Link Page | `ai/features/link-page.feature.md` | Pending |
 | 6 | Contact Page | `ai/features/contact-page.feature.md` | Pending |
@@ -75,9 +75,9 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 
 | Feature | Spec Written | Code Complete | Verified vs R1 | Status |
 |---|---|---|---|---|
-| Setup & Deploy | [x] | [ ] | [ ] | In Progress |
+| Setup & Deploy | [x] | [x] | [x] | Complete |
 | Project Layout | [x] | [x] | [x] | Complete |
-| Home Page | [ ] | [ ] | [ ] | Pending |
+| Home Page | [x] | [x] | [x] | Complete |
 | Portfolio Page | [ ] | [ ] | [ ] | Pending |
 | Link Page | [ ] | [ ] | [ ] | Pending |
 | Contact Page | [ ] | [ ] | [ ] | Pending |
@@ -179,7 +179,7 @@ damien-mccullor.github.io/
 │   └── features/
 │       ├── setup-deploy.feature.md   ✓ written
 │       ├── header-footer.feature.md  ✓ written
-│       ├── home-page.feature.md
+│       ├── home-page.feature.md      ✓ written
 │       ├── portfolio-page.feature.md
 │       ├── link-page.feature.md
 │       ├── contact-page.feature.md
@@ -205,8 +205,9 @@ damien-mccullor.github.io/
 │   │   ├── black-background/
 │   │   │   ├── BWG.png              — header logo (AI-generated: Gemini, ChatGPT, Copilot)
 │   │   │   ├── BGFF.png             — footer logo (AI-generated)
-│   │   │   └── [other variants]
-│   │   └── white_background/
+│   │   │   └── [other variants]   │   ├── images/
+   │   │   ├── Homepage_Image_Workspace.png  — AI-generated (Gemini): developer at workstation
+   │   │   └── Homepage_Image_Cyber.png      — AI-generated (Gemini): cybersecurity network│   │   └── white_background/
 │   │       └── [white bg variants]
 │   ├── components/
 │   │   ├── Header.jsx             ✓ created
