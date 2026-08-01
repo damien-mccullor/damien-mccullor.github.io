@@ -76,7 +76,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Feature | Spec Written | Code Complete | Verified vs R1 | Status |
 |---|---|---|---|---|
 | Setup & Deploy | [x] | [ ] | [ ] | In Progress |
-| Project Layout | [x] | [x] | [ ] | In Progress |
+| Project Layout | [x] | [x] | [x] | Complete |
 | Home Page | [ ] | [ ] | [ ] | Pending |
 | Portfolio Page | [ ] | [ ] | [ ] | Pending |
 | Link Page | [ ] | [ ] | [ ] | Pending |

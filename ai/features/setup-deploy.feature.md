@@ -87,18 +87,18 @@ Establish the complete project infrastructure: a scaffolded React + Vite applica
 
 ## Acceptance Criteria
 
-- [ ] `vite.config.js` contains `base: '/'`
-- [ ] `.github/workflows/deploy.yml` exists and is not empty
-- [ ] Workflow triggers on push to `main` branch
-- [ ] Workflow runs `npm ci` followed by `npm run build`
-- [ ] Workflow passes `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` via `env:` in the build step
-- [ ] Workflow deploys the `dist/` folder to GitHub Pages using Actions deployment
-- [ ] GitHub Pages repository settings are configured to use Actions as the deployment source
+- [x] `vite.config.js` contains `base: '/'`
+- [x] `.github/workflows/deploy.yml` exists and is not empty
+- [x] Workflow triggers on push to `main` branch
+- [x] Workflow runs `npm ci` followed by `npm run build`
+- [x] Workflow passes `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` via `env:` in the build step
+- [x] Workflow deploys the `dist/` folder to GitHub Pages using Actions deployment
+- [x] GitHub Pages repository settings are configured to use Actions as the deployment source
 - [ ] Navigating to `https://damien-mccullor.github.io` loads the React application without errors
-- [ ] `index.html` contains `<meta name="description" content="...">` 
-- [ ] `public/robots.txt` exists with `User-agent: *` and `Allow: /`
-- [ ] `.env` is present in `.gitignore`
-- [ ] No credentials or `.env` values appear in any committed file
+- [x] `index.html` contains `<meta name="description" content="...">`
+- [x] `public/robots.txt` exists with `User-agent: *` and `Allow: /`
+- [x] `.env` is present in `.gitignore`
+- [x] No credentials or `.env` values appear in any committed file
 
 ---
 

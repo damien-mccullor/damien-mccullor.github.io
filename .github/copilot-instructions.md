@@ -254,6 +254,12 @@ Feature spec file names must match R1 exactly, character-by-character.
 - **Cross-spec consistency rule:** The first feature spec created is the template. Every subsequent spec must follow the exact same section order. If a section does not apply, mark it `N/A` — never omit it.
 - Before declaring any feature done, open `REQUIREMENTS.md` and read its requirements line-by-line. R1 is always the authority.
 - Feature spec file names must match R1 exactly, character-by-character.
+- **Every R1 bullet must produce at least one named, concrete, verifiable acceptance criterion.** A vague criterion like "images scale appropriately" is not verifiable. A concrete one is "Global `img { max-width: 100% }` rule exists in `index.css`". If an R1 bullet cannot be traced to a testable condition in the spec, the spec is incomplete.
+- **Acceptance criteria fall into three categories — check them accordingly:**
+  - **Code-verified** (file exists, config is set, import is present) — check `[x]` as soon as the code is written and confirmed to compile/run.
+  - **User-action** (repo settings, GitHub Secrets, manual steps) — remains `[ ]` until the user explicitly confirms the action was completed.
+  - **Live-environment** (live URL loads, deployed behavior) — remains `[ ]` until the user confirms the live environment is working.
+- **No unchecked acceptance criterion may pass a pre-commit check.** If a user-action or live-environment criterion is unchecked at commit time, it is a blocker. The push must be blocked until the user confirms completion, or the criterion is explicitly noted as a known blocker with a plan to close it before `dev → main`.
 
 ---
 
@@ -300,6 +306,7 @@ Before every `git push`, read both lessons-learned files in full, then verify:
 
 - [ ] `.github/lessons-learned.md` read in full — every applicable lesson cross-checked
 - [ ] `.github/users-lessons-learned.md` read in full — every applicable lesson cross-checked
+- [ ] **All previously completed feature specs reviewed** — verify nothing in those features was broken by changes made in the current feature. If any past acceptance criterion is no longer met, it must be unchecked and the issue fixed before pushing.
 - [ ] `ai/ai-spec.md` Feature Index and Progress table updated **before** this commit — never after push
 - [ ] `ai/ai-spec.md` Feature Index status and structure map are in sync
 - [ ] `ai/ai-spec.md` Repository Structure reflects the actual file tree

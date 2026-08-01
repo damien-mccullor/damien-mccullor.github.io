@@ -109,3 +109,9 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Global image scaling — prevents images from overflowing viewport on mobile (R1: Global Responsive Behavior) */
+img {
+  max-width: 100%;
+  height: auto;
+}

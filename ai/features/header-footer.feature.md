@@ -102,26 +102,27 @@ Establish the persistent site-wide layout: a sticky header with the AI-generated
 
 ## Acceptance Criteria
 
-- [ ] `react-router-dom` is in `package.json` dependencies
-- [ ] `HashRouter` is configured in `src/main.jsx` wrapping the app
-- [ ] `src/constants/brandColors.js` exists and is the only place hex values are defined
-- [ ] `src/components/Layout.jsx` exists and wraps all page routes
-- [ ] `src/components/Header.jsx` exists with a sticky/fixed position
-- [ ] Header contains the AI-generated logo; clicking it navigates to `/`
-- [ ] Logo has an appropriate `alt` attribute
-- [ ] Header contains navigation links to Home (`/`), Portfolio (`/#/portfolio`), Links (`/#/links`), and Contact (`/#/contact`)
-- [ ] `src/components/Footer.jsx` exists and renders on every page
-- [ ] Footer includes email, at least one social link, and a copyright notice
-- [ ] Header background and styling are consistent across all pages
-- [ ] On desktop (>768px), navigation links are displayed horizontally in the header
-- [ ] On mobile (≤768px), navigation links become icons and are displayed in a fixed bottom bar
-- [ ] Logo scales without overflow on mobile viewports
-- [ ] Text is readable without horizontal scrolling on mobile
-- [ ] All 6 page stub files exist in `src/pages/`
-- [ ] Login and BackOffice routes are NOT shown in the navigation
-- [ ] Every new component file has a LOGIC BRIEFING block and SECTION comments
-- [ ] No hardcoded hex values outside `brandColors.js`
-- [ ] AI tool used for logo generation is documented in this spec
+- [x] `react-router-dom` is in `package.json` dependencies
+- [x] `HashRouter` is configured in `src/main.jsx` wrapping the app
+- [x] `src/constants/brandColors.js` exists and is the only place hex values are defined
+- [x] `src/components/Layout.jsx` exists and wraps all page routes
+- [x] `src/components/Header.jsx` exists with a sticky/fixed position
+- [x] Header contains the AI-generated logo; clicking it navigates to `/`
+- [x] Logo has an appropriate `alt` attribute
+- [x] Header contains navigation links to Home (`/`), Portfolio (`/#/portfolio`), Links (`/#/links`), and Contact (`/#/contact`)
+- [x] `src/components/Footer.jsx` exists and renders on every page
+- [x] Footer includes email, at least one social link, and a copyright notice
+- [x] Header background and styling are consistent across all pages
+- [x] On desktop (>768px), navigation links are displayed horizontally in the header
+- [x] On mobile (≤768px), navigation links become icons and are displayed in a fixed bottom bar
+- [x] Logo scales without overflow on mobile viewports
+- [x] Text is readable without horizontal scrolling on mobile
+- [x] Global `img { max-width: 100%; height: auto; }` rule exists in `src/index.css`
+- [x] All 6 page stub files exist in `src/pages/`
+- [x] Login and BackOffice routes are NOT shown in the navigation
+- [x] Every new component file has a LOGIC BRIEFING block and SECTION comments
+- [x] No hardcoded hex values outside `brandColors.js`
+- [x] AI tool used for logo generation is documented in this spec
 
 ---
 

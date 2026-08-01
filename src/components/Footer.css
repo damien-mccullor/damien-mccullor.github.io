@@ -75,4 +75,9 @@
     height: 70px;
     width: auto;
   }
+
+  /* Hide the decorative right logo on mobile to avoid double-stacking */
+  .footer__logo[aria-hidden="true"] {
+    display: none;
+  }
 }
