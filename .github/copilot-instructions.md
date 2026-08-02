@@ -304,6 +304,7 @@ Before removing any of the following, issue an **"Out of Standard"** warning to 
 
 Before every `git push`, read both lessons-learned files in full, then verify:
 
+- [ ] **`get_errors` run on every modified `.jsx`/`.js` file** — must return no errors before declaring any feature complete. This is a mandatory agent action, not a reminder.
 - [ ] `.github/lessons-learned.md` read in full — every applicable lesson cross-checked
 - [ ] `.github/users-lessons-learned.md` read in full — every applicable lesson cross-checked
 - [ ] **All previously completed feature specs reviewed** — verify nothing in those features was broken by changes made in the current feature. If any past acceptance criterion is no longer met, it must be unchecked and the issue fixed before pushing.

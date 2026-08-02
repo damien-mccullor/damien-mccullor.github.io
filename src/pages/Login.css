@@ -1,0 +1,104 @@
+/* Login page styles */
+
+/* SECTION: PAGE LAYOUT — centered card */
+.login {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+/* SECTION: LOGIN CARD */
+.login__card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.login__subtitle {
+  font-size: 0.875rem;
+  margin: 0 0 2rem;
+}
+
+/* SECTION: FORM FIELDS */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.login__label {
+  font-size: 0.925rem;
+  font-weight: 600;
+}
+
+.login__input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #cccccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.login__input:focus {
+  border-color: #B8860B;
+}
+
+/* SECTION: ERROR MESSAGE */
+.login__error {
+  padding: 0.75rem 1rem;
+  background-color: #fce8e8;
+  color: #c0392b;
+  border: 1px solid #f5b7b1;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* SECTION: SUBMIT BUTTON */
+.login__submit {
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 0.25rem;
+}
+
+.login__submit:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.login__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* SECTION: RESPONSIVE */
+@media (max-width: 768px) {
+  .login__card {
+    padding: 1.75rem;
+  }
+}
