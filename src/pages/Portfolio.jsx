@@ -24,7 +24,7 @@ const education = [
 
 const certifications = [
   { name: 'PCEP — Certified Entry-Level Python Programmer', issuer: 'Python Institute', year: '2025' },
-  { name: 'PCAD — Python Certification for Data Analytics', issuer: 'Cisco Networking Academy', year: '2025' },
+  { name: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy', year: '2025' },
   { name: 'Python Essentials 2 (Advanced Module)', issuer: 'Cisco Networking Academy', year: '2025' },
   { name: 'Database Fundamentals: Working with SQL Commands', issuer: 'Certificate of Completion', year: '2025' },
   { name: 'AWS Cloud Practitioner Training', issuer: 'Certificate of Completion', year: '2025' },

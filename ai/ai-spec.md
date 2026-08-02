@@ -64,7 +64,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | 2 | Project Layout (Header / Footer) | `ai/features/header-footer.feature.md` | Complete |
 | 3 | Home Page | `ai/features/home-page.feature.md` | Complete |
 | 4 | Portfolio Page | `ai/features/portfolio-page.feature.md` | Complete |
-| 5 | Link Page | `ai/features/link-page.feature.md` | Pending |
+| 5 | Link Page | `ai/features/link-page.feature.md` | Complete |
 | 6 | Contact Page | `ai/features/contact-page.feature.md` | Pending |
 | 7 | Login Page | `ai/features/login-page.feature.md` | Pending |
 | 8 | Back Office | `ai/features/back-office.feature.md` | Pending |
@@ -79,7 +79,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Project Layout | [x] | [x] | [x] | Complete |
 | Home Page | [x] | [x] | [x] | Complete |
 | Portfolio Page | [x] | [x] | [x] | Complete |
-| Link Page | [ ] | [ ] | [ ] | Pending |
+| Link Page | [x] | [x] | [x] | Complete |
 | Contact Page | [ ] | [ ] | [ ] | Pending |
 | Login Page | [ ] | [ ] | [ ] | Pending |
 | Back Office | [ ] | [ ] | [ ] | Pending |
@@ -211,7 +211,10 @@ damien-mccullor.github.io/
    │   ├── Portfolio_Project_Mobile.svg  — AI-generated (Copilot): Rocket Food mobile card
    │   ├── Portfolio_Project_API.svg     — AI-generated (Copilot): Rocket Food API card
    │   ├── Portfolio_Project_MERN.svg    — AI-generated (Copilot): CodeBloggs card
-   │   └── Portfolio_Project_DevPortfolio.svg — AI-generated (Copilot): Portfolio card
+   │   ├── Portfolio_Project_DevPortfolio.svg — AI-generated (Copilot): Portfolio card
+   │   ├── Link_LinkedIn.svg   — AI-generated (Copilot): LinkedIn card thumbnail
+   │   ├── Link_Resume.svg     — AI-generated (Copilot): Resume card thumbnail
+   │   └── Link_GitHub.svg     — AI-generated (Copilot): GitHub card thumbnail
 │   │       └── [white bg variants]
 │   ├── components/
 │   │   ├── Header.jsx             ✓ created

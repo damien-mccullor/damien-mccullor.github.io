@@ -1,0 +1,27 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="260" fill="#111111"/>
+  <rect x="0" y="0" width="600" height="3" fill="#FFD700"/>
+
+  <!-- GitHub Octocat-inspired circle -->
+  <circle cx="300" cy="115" r="70" fill="#1E1E1E" stroke="#FFD700" stroke-width="2"/>
+  <!-- Simplified cat head shape -->
+  <circle cx="300" cy="108" r="40" fill="#111111" stroke="#FFD700" stroke-width="1.5"/>
+  <!-- Ears -->
+  <polygon points="268,76 258,56 282,74" fill="#111111" stroke="#FFD700" stroke-width="1.5"/>
+  <polygon points="332,76 342,56 318,74" fill="#111111" stroke="#FFD700" stroke-width="1.5"/>
+  <!-- Eyes -->
+  <circle cx="288" cy="104" r="5" fill="#FFD700"/>
+  <circle cx="312" cy="104" r="5" fill="#FFD700"/>
+  <!-- Tentacle legs at bottom -->
+  <path d="M270,140 Q260,158 252,148 Q244,138 248,160" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <path d="M300,145 Q300,162 296,172 Q292,182 300,175" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <path d="M330,140 Q340,158 348,148 Q356,138 352,160" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Code bracket accents -->
+  <text x="130" y="120" fill="#AAAAAA" font-size="36" font-family="Arial" opacity="0.5">&lt;/&gt;</text>
+  <text x="420" y="120" fill="#AAAAAA" font-size="36" font-family="Arial" opacity="0.5">{}</text>
+
+  <!-- Footer -->
+  <rect x="0" y="228" width="600" height="32" fill="#1E1E1E"/>
+  <text x="300" y="249" fill="#FFD700" font-size="15" text-anchor="middle" font-family="Arial" font-weight="bold">GitHub Profile</text>
+</svg>
