@@ -1,0 +1,73 @@
+﻿<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="280" fill="#111111"/>
+  <rect x="0" y="0" width="600" height="3" fill="#FFD700"/>
+
+  <!-- Browser window -->
+  <rect x="130" y="25" width="340" height="210" rx="8" fill="#1E1E1E" stroke="#FFD700" stroke-width="2"/>
+
+  <!-- Browser chrome bar -->
+  <rect x="130" y="25" width="340" height="32" rx="8" fill="#2a2a2a"/>
+  <rect x="130" y="44" width="340" height="13" fill="#2a2a2a"/>
+
+  <!-- Traffic lights -->
+  <circle cx="152" cy="41" r="5" fill="#444444"/>
+  <circle cx="168" cy="41" r="5" fill="#444444"/>
+  <circle cx="184" cy="41" r="5" fill="#B8860B" opacity="0.8"/>
+
+  <!-- Address bar -->
+  <rect x="200" y="33" width="220" height="16" rx="8" fill="#111111"/>
+  <text x="310" y="44" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">damien-mccullor.github.io</text>
+
+  <!-- Portfolio site content inside browser -->
+  <!-- Nav bar -->
+  <rect x="130" y="57" width="340" height="20" fill="#111111"/>
+  <text x="155" y="70" fill="#FFD700" font-size="11" font-family="Arial" font-weight="bold">D.M</text>
+  <text x="300" y="70" fill="#E0E0E0" font-size="10.5" text-anchor="middle" font-family="Arial">Home  Portfolio  Links  Contact</text>
+
+  <!-- Hero section -->
+  <rect x="130" y="77" width="340" height="50" fill="#111111"/>
+  <text x="300" y="96" fill="#FFD700" font-size="11" text-anchor="middle" font-family="Arial" font-weight="bold">DAMIEN McCULLOR</text>
+  <text x="300" y="109" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">Full-Stack Software Engineer</text>
+
+  <!-- Skills section -->
+  <rect x="130" y="127" width="340" height="55" fill="#F8F8F8" opacity="0.04"/>
+  <text x="300" y="143" fill="#E0E0E0" font-size="10.5" text-anchor="middle" font-family="Arial">JavaScript  React  Node.js  Spring Boot</text>
+  <rect x="182" y="148" width="55" height="12" rx="2" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <rect x="242" y="148" width="55" height="12" rx="2" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <rect x="302" y="148" width="55" height="12" rx="2" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <rect x="362" y="148" width="55" height="12" rx="2" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <text x="210" y="157" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Languages</text>
+  <text x="270" y="157" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Frontend</text>
+  <text x="330" y="157" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Backend</text>
+  <text x="390" y="157" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Cloud</text>
+
+  <!-- Footer strip inside browser -->
+  <rect x="130" y="213" width="340" height="22" fill="#1a1a1a"/>
+  <text x="300" y="228" fill="#AAAAAA" font-size="10.5" text-anchor="middle" font-family="Arial">damien.mccullor@yahoo.com · linkedin · github</text>
+
+  <!-- CI/CD flow below browser (left) -->
+  <text x="30" y="50" fill="#FFD700" font-size="11" font-family="Arial" font-weight="bold">CI/CD</text>
+  <rect x="10" y="56" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#FFD700" stroke-width="1"/>
+  <text x="60" y="67" fill="#FFD700" font-size="11.5" text-anchor="middle" font-family="Arial">GitHub Actions</text>
+  <text x="60" y="82" fill="#E0E0E0" font-size="11" text-anchor="middle" font-family="Arial">&#x2193;</text>
+  <rect x="10" y="86" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="60" y="97" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">npm build</text>
+  <text x="60" y="112" fill="#E0E0E0" font-size="11" text-anchor="middle" font-family="Arial">&#x2193;</text>
+  <rect x="10" y="116" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="60" y="127" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">GitHub Pages</text>
+
+  <!-- Stack right -->
+  <text x="494" y="50" fill="#FFD700" font-size="11" font-family="Arial" font-weight="bold">Stack</text>
+  <rect x="480" y="56" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#FFD700" stroke-width="1"/>
+  <text x="530" y="67" fill="#FFD700" font-size="11.5" text-anchor="middle" font-family="Arial">React + Vite</text>
+  <rect x="480" y="78" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="530" y="89" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">Supabase BaaS</text>
+  <rect x="480" y="100" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="530" y="111" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">HashRouter SPA</text>
+  <rect x="480" y="122" width="100" height="16" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="530" y="133" fill="#E0E0E0" font-size="11.5" text-anchor="middle" font-family="Arial">GitHub Actions</text>
+
+  <!-- Footer -->
+  <rect x="0" y="248" width="600" height="32" fill="#1E1E1E"/>
+  <text x="300" y="269" fill="#FFD700" font-size="15" text-anchor="middle" font-family="Arial" font-weight="bold">Personal Developer Portfolio</text>
+</svg>

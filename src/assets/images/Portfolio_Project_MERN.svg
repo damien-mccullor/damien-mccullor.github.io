@@ -1,0 +1,66 @@
+﻿<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="280" fill="#111111"/>
+  <rect x="0" y="0" width="600" height="3" fill="#FFD700"/>
+
+  <!-- Three overlapping blog post cards -->
+  <!-- Back card -->
+  <rect x="185" y="50" width="230" height="155" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1.5" transform="rotate(-4 300 127)"/>
+
+  <!-- Middle card -->
+  <rect x="175" y="42" width="230" height="155" rx="6" fill="#222222" stroke="#444444" stroke-width="1.5" transform="rotate(2 300 119)"/>
+
+  <!-- Front card (main) -->
+  <rect x="170" y="35" width="260" height="165" rx="6" fill="#1E1E1E" stroke="#FFD700" stroke-width="2"/>
+
+  <!-- Card header bar -->
+  <rect x="170" y="35" width="260" height="28" rx="6" fill="#FFD700"/>
+  <rect x="170" y="50" width="260" height="13" fill="#B8860B"/>
+  <circle cx="187" cy="49" r="5" fill="#111111" opacity="0.5"/>
+  <circle cx="202" cy="49" r="5" fill="#111111" opacity="0.5"/>
+  <circle cx="217" cy="49" r="5" fill="#111111" opacity="0.5"/>
+  <text x="330" y="53" fill="#111111" font-size="12" text-anchor="middle" font-family="Arial" font-weight="bold">CodeBloggs — Dev Platform</text>
+
+  <!-- Avatar + author row -->
+  <circle cx="188" cy="82" r="10" fill="#333333" stroke="#FFD700" stroke-width="1"/>
+  <text x="188" y="86" fill="#FFD700" font-size="12" text-anchor="middle" font-family="Arial">D</text>
+  <text x="204" y="80" fill="#FFD700" font-size="12" font-family="Arial" font-weight="bold">dev_user</text>
+  <text x="204" y="90" fill="#E0E0E0" font-size="11" font-family="Arial">2 min ago</text>
+
+  <!-- Post title -->
+  <rect x="180" y="100" width="180" height="8" rx="2" fill="#444444"/>
+  <rect x="180" y="113" width="130" height="6" rx="2" fill="#333333"/>
+  <rect x="180" y="123" width="150" height="6" rx="2" fill="#333333"/>
+
+  <!-- Like/comment row -->
+  <text x="180" y="153" fill="#E0E0E0" font-size="12" font-family="Arial">&#x2665; 24 likes</text>
+  <text x="240" y="153" fill="#E0E0E0" font-size="12" font-family="Arial">&#x1F4AC; 7 comments</text>
+  <text x="325" y="153" fill="#E0E0E0" font-size="12" font-family="Arial">&#x21C4; Redux</text>
+
+  <!-- MERN stack badges along bottom -->
+  <text x="60" y="50" fill="#FFD700" font-size="12" font-family="Arial" font-weight="bold">MERN Stack</text>
+  <rect x="18" y="58" width="80" height="18" rx="3" fill="#1E1E1E" stroke="#FFD700" stroke-width="1"/>
+  <text x="58" y="70" fill="#FFD700" font-size="12" text-anchor="middle" font-family="Arial">MongoDB</text>
+  <rect x="18" y="82" width="80" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="58" y="94" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Express</text>
+  <rect x="18" y="106" width="80" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="58" y="118" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">React</text>
+  <rect x="18" y="130" width="80" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="58" y="142" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Node.js</text>
+  <rect x="18" y="154" width="80" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="58" y="166" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Redux-Thunk</text>
+
+  <!-- DevOps badges right -->
+  <text x="470" y="50" fill="#FFD700" font-size="12" font-family="Arial" font-weight="bold">DevOps</text>
+  <rect x="462" y="58" width="110" height="18" rx="3" fill="#1E1E1E" stroke="#FFD700" stroke-width="1"/>
+  <text x="517" y="70" fill="#FFD700" font-size="12" text-anchor="middle" font-family="Arial">Selenium IDE</text>
+  <rect x="462" y="82" width="110" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="517" y="94" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Lighthouse Audit</text>
+  <rect x="462" y="106" width="110" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="517" y="118" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">Agile / Pair Dev</text>
+  <rect x="462" y="130" width="110" height="18" rx="3" fill="#1E1E1E" stroke="#AAAAAA" stroke-width="1"/>
+  <text x="517" y="142" fill="#E0E0E0" font-size="12" text-anchor="middle" font-family="Arial">MongoDB Atlas</text>
+
+  <!-- Footer -->
+  <rect x="0" y="248" width="600" height="32" fill="#1E1E1E"/>
+  <text x="300" y="269" fill="#FFD700" font-size="15" text-anchor="middle" font-family="Arial" font-weight="bold">CodeBloggs — Developer Platform &amp; DevOps Suite</text>
+</svg>

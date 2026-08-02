@@ -63,7 +63,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | 1 | Setup & Deploy | `ai/features/setup-deploy.feature.md` | Complete |
 | 2 | Project Layout (Header / Footer) | `ai/features/header-footer.feature.md` | Complete |
 | 3 | Home Page | `ai/features/home-page.feature.md` | Complete |
-| 4 | Portfolio Page | `ai/features/portfolio-page.feature.md` | Pending |
+| 4 | Portfolio Page | `ai/features/portfolio-page.feature.md` | Complete |
 | 5 | Link Page | `ai/features/link-page.feature.md` | Pending |
 | 6 | Contact Page | `ai/features/contact-page.feature.md` | Pending |
 | 7 | Login Page | `ai/features/login-page.feature.md` | Pending |
@@ -78,7 +78,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Setup & Deploy | [x] | [x] | [x] | Complete |
 | Project Layout | [x] | [x] | [x] | Complete |
 | Home Page | [x] | [x] | [x] | Complete |
-| Portfolio Page | [ ] | [ ] | [ ] | Pending |
+| Portfolio Page | [x] | [x] | [x] | Complete |
 | Link Page | [ ] | [ ] | [ ] | Pending |
 | Contact Page | [ ] | [ ] | [ ] | Pending |
 | Login Page | [ ] | [ ] | [ ] | Pending |
@@ -207,7 +207,11 @@ damien-mccullor.github.io/
 │   │   │   ├── BGFF.png             — footer logo (AI-generated)
 │   │   │   └── [other variants]   │   ├── images/
    │   │   ├── Homepage_Image_Workspace.png  — AI-generated (Gemini): developer at workstation
-   │   │   └── Homepage_Image_Cyber.png      — AI-generated (Gemini): cybersecurity network│   │   └── white_background/
+   │   ├── Homepage_Image_Cyber.png      — AI-generated (Gemini): cybersecurity network
+   │   ├── Portfolio_Project_Mobile.svg  — AI-generated (Copilot): Rocket Food mobile card
+   │   ├── Portfolio_Project_API.svg     — AI-generated (Copilot): Rocket Food API card
+   │   ├── Portfolio_Project_MERN.svg    — AI-generated (Copilot): CodeBloggs card
+   │   └── Portfolio_Project_DevPortfolio.svg — AI-generated (Copilot): Portfolio card
 │   │       └── [white bg variants]
 │   ├── components/
 │   │   ├── Header.jsx             ✓ created

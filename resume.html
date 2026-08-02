@@ -1,0 +1,311 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin: 0 auto;
+  }
+
+  /* â”€â”€ HEADER â”€â”€ */
+  .header {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #B8860B;
+    margin-bottom: 10px;
+  }
+  .name {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #B8860B;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .contact {
+    font-size: 10pt;
+    color: #444;
+    letter-spacing: 0.2px;
+  }
+  .contact span { margin: 0 5px; color: #B8860B; }
+
+  /* â”€â”€ SECTION HEADERS â”€â”€ */
+  h2 {
+    font-size: 14pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #111111;
+    background-color: transparent;
+    padding: 0 0 3px 0;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #B8860B;
+  }
+
+  /* â”€â”€ PROFILE â”€â”€ */
+  .profile {
+    font-size: 11pt;
+    color: #333;
+  }
+
+  /* â”€â”€ SKILLS TABLE â”€â”€ */
+  table.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-bottom: 5px;
+  }
+  table.skills-table th {
+    background-color: #f5f5f5;
+    color: #111111;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding: 4px 7px;
+    border: 1px solid #cccccc;
+  }
+  table.skills-table td {
+    vertical-align: top;
+    width: 33.33%;
+    padding: 5px 7px;
+    border: 1px solid #cccccc;
+  }
+  table.skills-table ul { margin: 0; padding-left: 13px; }
+  table.skills-table li { margin-bottom: 2px; color: #333; }
+
+  .tech-tools {
+    font-size: 10pt;
+    color: #444;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  /* â”€â”€ JOB / PROJECT ENTRIES â”€â”€ */
+  .entry { margin-bottom: 9px; }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 7px;
+    margin-bottom: 1px;
+    gap: 8px;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 11pt;
+    color: #111111;
+  }
+  .entry-dates {
+    font-size: 10pt;
+    color: #555;
+    white-space: nowrap;
+  }
+  .entry-subtitle {
+    font-style: normal;
+    font-size: 11pt;
+    color: #B8860B;
+    margin-bottom: 3px;
+  }
+
+  ul.bullet-list {
+    margin: 3px 0 0 0;
+    padding-left: 15px;
+  }
+  ul.bullet-list li {
+    margin-bottom: 2.5px;
+    font-size: 11pt;
+    line-height: 1.15;
+    color: #333;
+  }
+
+  /* CERTIFICATIONS - two-column grid */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 20px;
+  }
+  .cert-item {
+    font-size: 10pt;
+    padding: 2px 0;
+    color: #333;
+    border-bottom: 1px dotted #cccccc;
+  }
+  .cert-item b { color: #111111; }
+
+  /* â”€â”€ EDUCATION â”€â”€ */
+  .edu-item { font-size: 11pt; color: #333; }
+  .edu-item b { color: #111111; }
+
+  /* â”€â”€ PRINT â”€â”€ */
+  @media print {
+    body { padding: 0; }
+    @page { size: letter; margin: 0.4in 0.5in; }
+    h2 { break-after: avoid; }
+    .entry { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="name">Damien McCullor</div>
+  <div class="contact">
+    Kapolei, HI
+    <span>|</span>
+    (252) 414-0846
+    <span>|</span>
+    damien.mccullor@yahoo.com
+    <span>|</span>
+    linkedin.com/in/damien-mccullor
+  </div>
+</div>
+
+<h2>Professional Profile</h2>
+<div class="profile">
+  <b>Full Stack Software Engineer</b> and <b>Cybersecurity</b> professional with a strong foundation in cross-platform mobile and web applications, REST API architecture, and database design. Combines 22 years of disciplined military operational leadership with expertise in JavaScript, React Native, Java Spring Boot, and Node.js to build scalable, secure, and production-ready applications.
+</div>
+
+<h2>Core Competencies &amp; Technical Skills</h2>
+<table class="skills-table">
+  <thead>
+    <tr>
+      <th>Frontend Development</th>
+      <th>Backend &amp; Database</th>
+      <th>Tools, Security &amp; Cloud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>JavaScript (ES6+)</li>
+          <li>React / React Native</li>
+          <li>Expo SDK &amp; Router</li>
+          <li>HTML5 &amp; CSS3</li>
+          <li>Tailwind CSS / UI Frameworks</li>
+          <li>Responsive Web Design</li>
+          <li>Redux State Management</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Node.js &amp; Express</li>
+          <li>Java 17 &amp; Spring Boot</li>
+          <li>Python (Flask / APIs)</li>
+          <li>RESTful API Design</li>
+          <li>SQL (MySQL, PostgreSQL)</li>
+          <li>MongoDB &amp; Supabase</li>
+          <li>JPA / Hibernate ORM</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Git / GitHub / Version Control</li>
+          <li>VS Code &amp; DBeaver</li>
+          <li>AWS Cloud Concepts</li>
+          <li>Cybersecurity Compliance</li>
+          <li>Automated Testing (Selenium)</li>
+          <li>JUnit 5 &amp; MockMvc</li>
+          <li>CI/CD (GitHub Actions)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="tech-tools">
+  <b>Technical Tools &amp; Technologies:</b>&nbsp; VS Code &nbsp;&middot;&nbsp; Git &nbsp;&middot;&nbsp; GitHub &nbsp;&middot;&nbsp; React Native &nbsp;&middot;&nbsp; Node.js &nbsp;&middot;&nbsp; Java Spring Boot &nbsp;&middot;&nbsp; Postman &nbsp;&middot;&nbsp; MySQL Workbench &nbsp;&middot;&nbsp; DBeaver &nbsp;&middot;&nbsp; Selenium &nbsp;&middot;&nbsp; AWS
+</div>
+
+<h2>Technical Projects</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Rocket Food Delivery &mdash; Customer &amp; Courier Mobile App</span>
+  </div>
+  <div class="entry-subtitle">React Native &nbsp;/&nbsp; Expo SDK &nbsp;/&nbsp; Java Spring Boot REST API</div>
+  <ul class="bullet-list">
+    <li>Architected a cross-platform mobile food delivery application using React Native and Expo SDK (~55) connected to a Java Spring Boot backend REST API.</li>
+    <li>Implemented token-based authentication with persistent JWT storage via AsyncStorage and configured custom brand typography.</li>
+    <li>Designed dynamic customer ordering workflows with stepper quantity controls, real-time order confirmation modals, and SMS/Email notification opt-ins.</li>
+    <li>Developed dual-role session routing for user accounts and dedicated courier delivery management views with strict order state transition locks.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Rocket Food Delivery &mdash; Enterprise REST API &amp; Back-Office</span>
+  </div>
+  <div class="entry-subtitle">Java 17 &nbsp;/&nbsp; Spring Boot &nbsp;/&nbsp; MySQL &nbsp;/&nbsp; Hibernate</div>
+  <ul class="bullet-list">
+    <li>Architected an enterprise back-office management system using Java 17, Spring Boot, MySQL, and Thymeleaf across a 9-table relational database.</li>
+    <li>Engineered an enterprise REST API following strict Test-Driven Development (TDD) using JUnit 5, MockMvc, and Postman API testing suites.</li>
+    <li>Secured backend operations with parameterized native SQL queries to eliminate SQL injection vulnerabilities and decoupled domain logic into dedicated service layers.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">CodeBloggs &mdash; Developer Platform &amp; DevOps Suite</span>
+  </div>
+  <div class="entry-subtitle">MERN Stack (MongoDB, Express, React, Node.js) &nbsp;/&nbsp; Selenium &nbsp;/&nbsp; Lighthouse</div>
+  <ul class="bullet-list">
+    <li>Collaborated in an Agile two-person engineering team to build a developer social platform using MongoDB Atlas, Express, React, Node.js, and Redux-Thunk.</li>
+    <li>Executed DevOps quality auditing using Google Lighthouse to refactor performance, accessibility, and SEO metrics.</li>
+    <li>Automated end-to-end browser regression testing by authoring a comprehensive test suite using Selenium IDE.</li>
+  </ul>
+</div>
+
+<h2>Work Experience</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Lead Simulation Supervisor / Battle Director</span>
+    <span class="entry-dates">Mar 2015 &mdash; Apr 2024</span>
+  </div>
+  <div class="entry-subtitle">Hawaii Air National Guard</div>
+  <ul class="bullet-list">
+    <li>Led technical data synthesis efforts for mission post-analysis, automating manual tasks to achieve a <b>15% improvement</b> in operational reporting efficiency.</li>
+    <li>Managed complex system architectures and enforced strict cybersecurity compliance across classified networks and data feeds.</li>
+    <li>Mentored 30+ technical personnel in system workflows, troubleshooting, and operational execution under high-pressure scenarios.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Operations Specialist</span>
+    <span class="entry-dates">Jun 2000 &mdash; Mar 2013</span>
+  </div>
+  <div class="entry-subtitle">United States Navy &mdash; Multiple Duty Stations</div>
+  <ul class="bullet-list">
+    <li>Analyzed real-time radar data for 500+ contacts per watch cycle, maintaining strict database entry integrity and reducing processing errors by <b>8%</b>.</li>
+    <li>Maintained mission-critical relational system records, ensuring uninterrupted data accuracy for tactical decision support.</li>
+  </ul>
+</div>
+
+<h2>Certifications &amp; Training</h2>
+<div class="cert-grid">
+  <div class="cert-item"><b>Full Stack Web &amp; Mobile Development Training (In Progress)</b> &mdash; Codeboxx | 2026</div>
+  <div class="cert-item"><b>PCEP &mdash; Certified Entry-Level Python Programmer</b> &mdash; Python Institute | 2025</div>
+  <div class="cert-item"><b>PCAP &mdash; Certified Associate in Python Programming (Course &amp; Exam Completed)</b> &mdash; Cisco Networking Academy / Python Institute Partner | 2025</div>
+  <div class="cert-item"><b>PCAD &mdash; Python Certification for Data Analytics</b> &mdash; Cisco Networking Academy | 2025</div>
+  <div class="cert-item"><b>AWS Cloud Practitioner Training</b> &mdash; Certificate of Completion | 2025</div>
+</div>
+
+<h2>Education</h2>
+<div class="edu-item">
+  <b>Candidate for Bachelor of Science in Cybersecurity</b> &mdash; Wayland Baptist University &nbsp;|&nbsp; Expected May 2027 &nbsp;(Status: Junior)
+</div>
+
+</body>
+</html>
