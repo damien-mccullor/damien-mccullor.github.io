@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "links": "Liens",
+    "contact": "Contact",
+    "logout": "Déconnexion"
+  },
+  "home": {
+    "tagline": "Développeur Full-Stack",
+    "bio": "Damien est ingénieur logiciel full-stack et vétéran militaire, dévoué à la création de solutions numériques efficaces et fiables. Grâce à des compétences techniques pratiques en React, React Native, Node.js et les pipelines de déploiement comme GitHub Actions, il se concentre sur l'écriture d'un code propre et évolutif. Actuellement en cours d'obtention de son diplôme en cybersécurité, Damien apporte une approche disciplinée et axée sur les systèmes au développement logiciel, et s'efforce de combler le fossé entre le développement d'applications et la cyberdéfense.",
+    "skills_title": "Compétences Techniques",
+    "soft_title": "Compétences Comportementales & Talents",
+    "skill_categories": {
+      "languages": "Langages",
+      "frontend_mobile": "Frontend & Mobile",
+      "backend_database": "Backend & Base de données",
+      "cloud_tools": "Cloud & Outils"
+    },
+    "skills": {
+      "javascript": { "name": "JavaScript", "desc": "Un langage de script polyvalent utilisé dans le développement d'applications web et mobiles full-stack pour créer des interfaces front-end dynamiques et des services back-end asynchrones." },
+      "python": { "name": "Python", "desc": "Un puissant langage orienté objet utilisé pour la logique applicative côté serveur, le traitement de données, les scripts et les tâches d'automatisation fondamentales." },
+      "react": { "name": "React", "desc": "Une bibliothèque JavaScript basée sur les composants pour construire des interfaces utilisateur réactives et gérées par l'état, ainsi que des applications web monopages modulaires." },
+      "react_native": { "name": "React Native", "desc": "Un framework multiplateforme utilisé pour développer des applications mobiles iOS et Android natives en JavaScript avec des architectures de composants simplifiées." },
+      "nodejs": { "name": "Node.js", "desc": "Un environnement d'exécution JavaScript côté serveur utilisé pour créer des API RESTful rapides, gérer les flux de travail serveur et traiter la logique applicative back-end." },
+      "mongodb": { "name": "MongoDB", "desc": "Une base de données documentaire NoSQL flexible pour stocker des données semi-structurées de type JSON dans des environnements d'applications web évolutives." },
+      "mongoose": { "name": "Mongoose", "desc": "Une bibliothèque ODM pour Node.js et MongoDB utilisée pour gérer les schémas, appliquer les structures de données et simplifier les opérations CRUD." },
+      "mysql": { "name": "MySQL (SQL)", "desc": "Un système de gestion de base de données relationnelle utilisant le langage SQL pour concevoir des schémas, exécuter des requêtes et maintenir l'intégrité des données." },
+      "aws": { "name": "AWS", "desc": "Une plateforme de cloud computing utilisée pour déployer, héberger et gérer des applications web dans des environnements cloud." },
+      "git": { "name": "Git", "desc": "Un système de contrôle de version distribué pour gérer les branches de fonctionnalités, suivre l'historique du code source et collaborer en toute sécurité." },
+      "github_actions": { "name": "GitHub Actions", "desc": "Une plateforme CI/CD utilisée pour automatiser les tests, les processus de build et rationaliser les déploiements logiciels directement dans GitHub." },
+      "tableau": { "name": "Tableau", "desc": "Un outil de visualisation de données standard de l'industrie pour transformer les requêtes brutes en tableaux de bord interactifs et en indicateurs opérationnels." },
+      "excel": { "name": "Excel", "desc": "Un outil de tableur fondamental utilisé pour le nettoyage initial des données, les audits numériques rapides et l'organisation structurée des données." },
+      "dbeaver": { "name": "DBeaver", "desc": "Un outil d'administration de base de données universel pour se connecter aux bases de données, exécuter des scripts SQL personnalisés et inspecter les structures de schémas." }
+    },
+    "soft_skills": {
+      "communication": { "name": "Communication", "desc": "Traduire des concepts techniques complexes clairement pour les coéquipiers et les parties prenantes non techniques. Appliqué dans la rédaction de documentation, l'explication de l'architecture système et la collaboration sur les exigences." },
+      "leadership": { "name": "Leadership", "desc": "Guider les projets et soutenir les membres de l'équipe pour atteindre des objectifs techniques communs. Démontre la responsabilité, la prise de décision stratégique et un souci du maintien de standards d'équipe élevés." },
+      "teamwork": { "name": "Travail d'équipe", "desc": "Collaborer étroitement avec des équipes pluridisciplinaires pour construire, tester et déployer des logiciels efficacement. Se concentre sur les révisions de code claires, l'écoute active et la résolution collective de problèmes." },
+      "problem_solving": { "name": "Résolution de problèmes", "desc": "Analyser les bugs logiciels complexes, les goulots d'étranglement système ou les défis opérationnels de manière systématique. Appliqué pour identifier les causes racines et livrer des solutions fiables sous des délais serrés." },
+      "adaptability": { "name": "Adaptabilité", "desc": "Maîtriser rapidement de nouveaux langages de programmation, frameworks et outils selon les besoins du projet. Flexible pour s'adapter aux environnements techniques changeants et aux priorités de projet en évolution." },
+      "critical_thinking": { "name": "Pensée critique", "desc": "Évaluer objectivement les solutions techniques, les architectures système et les risques de sécurité. Assure que les décisions sont basées sur les données, les meilleures pratiques et la maintenabilité à long terme." },
+      "continuous_learning": { "name": "Apprentissage continu", "desc": "Élargir activement les connaissances techniques par l'auto-apprentissage, les certifications et les projets pratiques. Dédié à rester à jour avec les outils logiciels émergents, les pratiques de sécurité et les standards de l'industrie." }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Formation · Expérience · Projets",
+    "download": "Télécharger le CV (PDF)",
+    "education_title": "Formation",
+    "cert_title": "Certifications & Formation",
+    "work_title": "Expérience Professionnelle",
+    "projects_title": "Projets",
+    "in_progress": "En cours",
+    "junior": "Junior — En cours",
+    "expected": "Prévu mai 2027"
+  },
+  "links": {
+    "title": "Liens",
+    "subtitle": "Profils Professionnels & Ressources",
+    "linkedin_title": "Profil LinkedIn",
+    "linkedin_desc": "Profil de réseautage professionnel présentant l'expérience professionnelle, la carrière militaire, les compétences techniques et les certifications. Connectez-vous pour consulter l'historique complet de carrière.",
+    "resume_title": "CV en ligne",
+    "resume_desc": "CV d'ingénieur logiciel full-stack hébergé sur LinkedIn, incluant les projets techniques, les certifications Python, l'expérience de leadership militaire et la formation en cybersécurité.",
+    "github_title": "Profil GitHub",
+    "github_desc": "Dépôts de projets open source incluant des applications mobiles React Native, des API REST Java Spring Boot et des applications MERN. Consultez l'historique des commits et la qualité du code.",
+    "visit": "Visiter →"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Envoyez un message et je vous répondrai.",
+    "name_label": "Nom",
+    "email_label": "Courriel",
+    "message_label": "Message",
+    "name_placeholder": "Votre nom complet",
+    "email_placeholder": "votre@email.com",
+    "message_placeholder": "Écrivez votre message ici...",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours…",
+    "success": "Message envoyé ! Nous vous contacterons bientôt.",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "err_name": "Le nom est requis.",
+    "err_email_required": "L'adresse courriel est requise.",
+    "err_email_format": "Entrez une adresse courriel valide.",
+    "err_message": "Le message est requis."
+  }
+}

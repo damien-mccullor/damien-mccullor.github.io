@@ -68,6 +68,8 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | 6 | Contact Page | `ai/features/contact-page.feature.md` | Complete |
 | 7 | Login Page | `ai/features/login-page.feature.md` | Complete |
 | 8 | Back Office | `ai/features/back-office.feature.md` | Complete |
+| EM-1 | Languages (EN/FR) | `ai/features/languages.feature.md` | Complete |
+| EM-2 | Light & Dark Mode | `ai/features/light-dark-mode.feature.md` | In Progress |
 
 ---
 
@@ -83,6 +85,8 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Contact Page | [x] | [x] | [x] | Complete |
 | Login Page | [x] | [x] | [x] | Complete |
 | Back Office | [x] | [x] | [x] | Complete |
+| Languages (EN/FR) | [x] | [x] | [x] | Complete |
+| Light & Dark Mode | [x] | [ ] | [ ] | In Progress |
 
 ---
 

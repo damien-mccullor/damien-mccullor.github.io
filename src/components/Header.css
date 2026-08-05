@@ -62,6 +62,54 @@
   opacity: 0.75;
 }
 
+.header__logout-btn {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.header__logout-btn:hover {
+  opacity: 1;
+}
+
+.header__lang {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header__lang-btn {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.header__lang-btn:hover,
+.header__lang-btn--active {
+  opacity: 1;
+}
+
+.header__lang-sep {
+  font-size: 0.75rem;
+}
+
+.mobile-nav__logout {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* SECTION: MOBILE BOTTOM NAV */
 .mobile-nav {
   display: none;

@@ -47,12 +47,19 @@ function BackOffice() {
     }
   }, [])
 
-  /* SECTION: DELETE MESSAGE — optimistic update */
+  /* SECTION: DELETE MESSAGE — optimistic update with rollback on failure */
   async function handleDelete(id) {
+    const snapshot = messages.find(m => m.id === id)
     setDeletingIds(prev => new Set(prev).add(id))
     setMessages(prev => prev.filter(m => m.id !== id))
-    await supabase.from('messages').delete().eq('id', id)
+
+    const { error } = await supabase.from('messages').delete().eq('id', id)
+
     setDeletingIds(prev => { const s = new Set(prev); s.delete(id); return s })
+    if (error) {
+      setMessages(prev => [snapshot, ...prev].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
+      setError('Delete failed. Check Supabase RLS policies.')
+    }
   }
 
   /* SECTION: MODAL ESCAPE KEY LISTENER */

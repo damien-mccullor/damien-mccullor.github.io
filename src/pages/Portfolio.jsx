@@ -6,6 +6,7 @@
  */
 
 import { brandColors } from '../constants/brandColors'
+import { useLanguage } from '../context/LanguageContext'
 import imgMobile from '../assets/images/Portfolio_Project_Mobile.svg'
 import imgAPI from '../assets/images/Portfolio_Project_API.svg'
 import imgMERN from '../assets/images/Portfolio_Project_MERN.svg'
@@ -88,14 +89,15 @@ const projects = [
 ]
 
 function Portfolio() {
+  const { t } = useLanguage()
   return (
     <div className="portfolio">
 
       {/* SECTION: PAGE HEADER */}
       <section className="portfolio__header" style={{ backgroundColor: brandColors.dark, color: brandColors.textLight }}>
-        <h1 className="portfolio__title" style={{ color: brandColors.accent }}>Portfolio</h1>
+        <h1 className="portfolio__title" style={{ color: brandColors.accent }}>{t('portfolio.title')}</h1>
         <p className="portfolio__subtitle" style={{ color: brandColors.textMuted }}>
-          Education · Experience · Projects
+          {t('portfolio.subtitle')}
         </p>
         {/* download attr triggers file download; file must be in public/ */}
         <a
@@ -104,13 +106,13 @@ function Portfolio() {
           className="portfolio__download-btn"
           style={{ backgroundColor: brandColors.accent, color: brandColors.dark }}
         >
-          Download Resume (PDF)
+          {t('portfolio.download')}
         </a>
       </section>
 
       {/* SECTION: EDUCATION */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>Education</h2>
+        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>{t('portfolio.education_title')}</h2>
 
         {education.map(({ institution, degree, status, dates }) => (
           <div key={institution} className="portfolio__edu-card" style={{ backgroundColor: brandColors.white }}>
@@ -121,7 +123,7 @@ function Portfolio() {
         ))}
 
         {/* SECTION: CERTIFICATIONS */}
-        <h3 className="portfolio__sub-title" style={{ color: brandColors.textDark }}>Certifications &amp; Training</h3>
+        <h3 className="portfolio__sub-title" style={{ color: brandColors.textDark }}>{t('portfolio.cert_title')}</h3>
         <ul className="portfolio__cert-list">
           {certifications.map(({ name, issuer, year }) => (
             <li key={name} className="portfolio__cert-item">
@@ -134,7 +136,7 @@ function Portfolio() {
 
       {/* SECTION: WORK EXPERIENCE */}
       <section className="portfolio__section portfolio__section--dark" style={{ backgroundColor: brandColors.midDark }}>
-        <h2 className="portfolio__section-title" style={{ color: brandColors.accent }}>Work Experience</h2>
+        <h2 className="portfolio__section-title" style={{ color: brandColors.accent }}>{t('portfolio.work_title')}</h2>
         {workExperience.map(({ title, organization, dates, bullets }) => (
           <div key={title} className="portfolio__work-card">
             <h3 className="portfolio__work-title" style={{ color: brandColors.accent }}>{title}</h3>
@@ -151,7 +153,7 @@ function Portfolio() {
 
       {/* SECTION: PROJECTS */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>Projects</h2>
+        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>{t('portfolio.projects_title')}</h2>
         <div className="portfolio__project-grid">
           {projects.map(({ name, tech, description, image }) => (
             <div key={name} className="portfolio__project-card" style={{ backgroundColor: brandColors.white }}>

@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "links": "Links",
+    "contact": "Contact",
+    "logout": "Logout"
+  },
+  "home": {
+    "tagline": "Full-Stack Developer",
+    "bio": "Damien is a Full-Stack Software Engineer and military veteran dedicated to building efficient, reliable digital solutions. With practical technical skills in React, React Native, Node.js, and cloud deployment workflows like GitHub Actions, he focuses on writing clean, scalable code. Currently completing his degree in Cyber Security, Damien brings a disciplined, system-focused approach to software development and strives to bridge the gap between application development and cyber defense.",
+    "skills_title": "Technical Skills",
+    "soft_title": "Soft Skills & Talents",
+    "skill_categories": {
+      "languages": "Languages",
+      "frontend_mobile": "Frontend & Mobile",
+      "backend_database": "Backend & Database",
+      "cloud_tools": "Cloud & Tools"
+    },
+    "skills": {
+      "javascript": { "name": "JavaScript", "desc": "A versatile core scripting language used across full-stack web and mobile application development to build dynamic front-end interfaces and asynchronous backend services." },
+      "python": { "name": "Python", "desc": "A powerful object-oriented language utilized for backend application logic, data processing, scripting, and foundational automation tasks." },
+      "react": { "name": "React", "desc": "A component-based JavaScript library applied to construct responsive, state-managed user interfaces and modular single-page web applications." },
+      "react_native": { "name": "React Native", "desc": "A cross-platform framework used to develop native iOS and Android mobile applications using JavaScript and streamlined component architectures." },
+      "nodejs": { "name": "Node.js", "desc": "A server-side JavaScript runtime environment used to build fast RESTful APIs, manage server workflows, and process backend application logic." },
+      "mongodb": { "name": "MongoDB", "desc": "A flexible NoSQL document database used to store semi-structured JSON-like data in scalable web application environments." },
+      "mongoose": { "name": "Mongoose", "desc": "An Object Data Modeling (ODM) library for Node.js and MongoDB used to manage schemas, enforce data structures, and simplify CRUD operations." },
+      "mysql": { "name": "MySQL (SQL)", "desc": "A relational database management system using Structured Query Language to design structured schemas, execute queries, and maintain data integrity." },
+      "aws": { "name": "AWS", "desc": "A cloud computing platform used for deploying, hosting, and managing web applications in cloud environments." },
+      "git": { "name": "Git", "desc": "A distributed version control system applied to manage feature branches, track source code history, and collaborate securely." },
+      "github_actions": { "name": "GitHub Actions", "desc": "A CI/CD platform utilized to automate testing, build workflows, and streamline software deployments directly within GitHub." },
+      "tableau": { "name": "Tableau", "desc": "An industry-standard data visualization tool applied to transform raw database queries into interactive dashboards and operational metrics." },
+      "excel": { "name": "Excel", "desc": "A foundational spreadsheet tool used for initial data cleanup, quick numerical audits, and structural data organization." },
+      "dbeaver": { "name": "DBeaver", "desc": "A universal database administration tool used to connect directly to databases, execute custom SQL scripts, and inspect schema structures visually." }
+    },
+    "soft_skills": {
+      "communication": { "name": "Communication", "desc": "Translating complex technical concepts clearly for teammates and non-technical stakeholders. Applied in writing clear documentation, explaining system architecture, and collaborating on requirements." },
+      "leadership": { "name": "Leadership", "desc": "Guiding projects and supporting team members to achieve shared technical goals. Demonstrates accountability, strategic decision-making, and a focus on maintaining high team standards." },
+      "teamwork": { "name": "Teamwork", "desc": "Working closely with cross-functional teams to build, test, and deploy software effectively. Focuses on clear code reviews, active listening, and collective problem-solving." },
+      "problem_solving": { "name": "Problem Solving", "desc": "Analyzing complex software bugs, system bottlenecks, or operational challenges systematically. Applied in tracing root causes and delivering reliable, practical solutions under tight deadlines." },
+      "adaptability": { "name": "Adaptability", "desc": "Quickly mastering new programming languages, frameworks, and tools as project demands evolve. Flexible in adjusting to changing technical environments and shifting project priorities." },
+      "critical_thinking": { "name": "Critical Thinking", "desc": "Evaluating technical solutions, system architectures, and security risks objectively. Ensures decisions are based on data, industry best practices, and long-term maintainability." },
+      "continuous_learning": { "name": "Continuous Learning", "desc": "Actively expanding technical knowledge through self-study, certifications, and hands-on projects. Dedicated to staying current with emerging software tools, security practices, and industry standards." }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Education · Experience · Projects",
+    "download": "Download Resume (PDF)",
+    "education_title": "Education",
+    "cert_title": "Certifications & Training",
+    "work_title": "Work Experience",
+    "projects_title": "Projects",
+    "in_progress": "In Progress",
+    "junior": "Junior — In Progress",
+    "expected": "Expected May 2027"
+  },
+  "links": {
+    "title": "Links",
+    "subtitle": "Professional Profiles & Resources",
+    "linkedin_title": "LinkedIn Profile",
+    "linkedin_desc": "Professional networking profile showcasing work experience, military career, technical skills, and certifications. Connect to view the full career history and send a message.",
+    "resume_title": "Online Resume",
+    "resume_desc": "Full-stack software engineer resume hosted on LinkedIn, including technical projects, Python certifications, military leadership experience, and cybersecurity coursework.",
+    "github_title": "GitHub Profile",
+    "github_desc": "Open source project repositories including React Native mobile apps, Java Spring Boot REST APIs, and MERN stack applications. View commit history and code quality.",
+    "visit": "Visit →"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Send a message and I will get back to you.",
+    "name_label": "Name",
+    "email_label": "Email",
+    "message_label": "Message",
+    "name_placeholder": "Your full name",
+    "email_placeholder": "your@email.com",
+    "message_placeholder": "Write your message here...",
+    "submit": "Send Message",
+    "sending": "Sending…",
+    "success": "Message sent! We will be in touch soon.",
+    "error": "Something went wrong. Please try again.",
+    "err_name": "Name is required.",
+    "err_email_required": "Email is required.",
+    "err_email_format": "Enter a valid email address.",
+    "err_message": "Message is required."
+  }
+}

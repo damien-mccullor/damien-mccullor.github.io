@@ -10,6 +10,10 @@ REQUIREMENTS_2.md
 temp_copilot_instructions.md
 temp_copilot_instructions
 
+# Extra mile specs — held back until their own feature branches
+ai/features/light-dark-mode.feature.md
+CONCEPTS.md
+
 # Logs
 logs
 *.log

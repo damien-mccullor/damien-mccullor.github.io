@@ -5,11 +5,14 @@
  * Desktop (>768px): logo + horizontal nav links fixed at top.
  * Mobile (≤768px): logo-only header at top; icon-only nav bar fixed at bottom.
  * Login and BackOffice routes are intentionally excluded from navigation.
- * No Supabase calls. No state. Uses NavLink for active-link highlighting.
+ * Subscribes to Supabase auth state: shows a Logout button in the header when admin is authenticated.
  */
 
-import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { brandColors } from '../constants/brandColors'
+import { useLanguage } from '../context/LanguageContext'
+import supabase from '../lib/supabaseClient'
 import logoHeader from '../assets/black-background/BWG.png'
 import './Header.css'
 
@@ -31,6 +34,29 @@ const navIcons = {
 
 /* SECTION: COMPONENT */
 function Header() {
+  /* SECTION: AUTH STATE — only true when admin is logged in */
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const navigate = useNavigate()
+  const { language, setLanguage, t } = useLanguage()
+
+  /* SECTION: SUBSCRIBE TO AUTH CHANGES — updates logout button visibility */
+  useEffect(() => {
+    if (!supabase) return
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setIsAuthenticated(!!session)
+    })
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsAuthenticated(!!session)
+    })
+    return () => subscription.unsubscribe()
+  }, [])
+
+  /* SECTION: LOGOUT HANDLER */
+  async function handleLogout() {
+    await supabase.auth.signOut()
+    navigate('/', { replace: true })
+  }
+
   return (
     <>
       {/* SECTION: DESKTOP HEADER — hidden on mobile via CSS */}
@@ -55,9 +81,25 @@ function Header() {
               }
               style={{ color: brandColors.accent }}
             >
-              {label}
+              {t(`nav.${label.toLowerCase()}`)}
             </NavLink>
           ))}
+          {/* language switcher — always visible */}
+          <div className="header__lang">
+            <button onClick={() => setLanguage('en')} className={`header__lang-btn${language === 'en' ? ' header__lang-btn--active' : ''}`} style={{ color: brandColors.textDark }}>EN</button>
+            <span className="header__lang-sep" style={{ color: brandColors.textMuted }}>|</span>
+            <button onClick={() => setLanguage('fr')} className={`header__lang-btn${language === 'fr' ? ' header__lang-btn--active' : ''}`} style={{ color: brandColors.textDark }}>FR</button>
+          </div>
+          {/* logout button — only visible when admin is authenticated */}
+          {isAuthenticated && (
+            <button
+              onClick={handleLogout}
+              className="header__logout-btn"
+              style={{ color: brandColors.textDark }}
+            >
+              {t('nav.logout')}
+            </button>
+          )}
         </nav>
       </header>
 
@@ -78,6 +120,18 @@ function Header() {
             </span>
           </NavLink>
         ))}
+        {/* logout icon — only visible on mobile when admin is authenticated */}
+        {isAuthenticated && (
+          <button
+            onClick={handleLogout}
+            className="mobile-nav__item mobile-nav__logout"
+            aria-label="Logout"
+          >
+            <span className="mobile-nav__icon" style={{ fill: brandColors.textMuted }}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+            </span>
+          </button>
+        )}
       </nav>
     </>
   )

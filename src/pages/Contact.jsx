@@ -10,6 +10,7 @@
 import { useState } from 'react'
 import supabase from '../lib/supabaseClient'
 import { brandColors } from '../constants/brandColors'
+import { useLanguage } from '../context/LanguageContext'
 import './Contact.css'
 
 function Contact() {
@@ -18,6 +19,7 @@ function Contact() {
   const [errors, setErrors] = useState({})
   const [feedback, setFeedback] = useState(null) // { type: 'success'|'error', text: string }
   const [submitting, setSubmitting] = useState(false)
+  const { t } = useLanguage()
 
   /* SECTION: INPUT HANDLER */
   function handleChange(e) {
@@ -29,13 +31,13 @@ function Contact() {
   /* SECTION: VALIDATION */
   function validate() {
     const newErrors = {}
-    if (!formData.name.trim()) newErrors.name = 'Name is required.'
+    if (!formData.name.trim()) newErrors.name = t('contact.err_name')
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required.'
+      newErrors.email = t('contact.err_email_required')
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Enter a valid email address.'
+      newErrors.email = t('contact.err_email_format')
     }
-    if (!formData.message.trim()) newErrors.message = 'Message is required.'
+    if (!formData.message.trim()) newErrors.message = t('contact.err_message')
     return newErrors
   }
 
@@ -52,7 +54,7 @@ function Contact() {
     setFeedback(null)
 
     if (!supabase) {
-      setFeedback({ type: 'error', text: 'Something went wrong. Please try again.' })
+      setFeedback({ type: 'error', text: t('contact.error') })
       setSubmitting(false)
       return
     }
@@ -64,11 +66,11 @@ function Contact() {
     setSubmitting(false)
 
     if (error) {
-      setFeedback({ type: 'error', text: 'Something went wrong. Please try again.' })
+      setFeedback({ type: 'error', text: t('contact.error') })
     } else {
       setFormData({ name: '', email: '', message: '' })
       setErrors({})
-      setFeedback({ type: 'success', text: 'Message sent! We will be in touch soon.' })
+      setFeedback({ type: 'success', text: t('contact.success') })
       setTimeout(() => setFeedback(null), 4000)
     }
   }
@@ -78,9 +80,9 @@ function Contact() {
 
       {/* SECTION: PAGE HEADER */}
       <section className="contact__header" style={{ backgroundColor: brandColors.dark, color: brandColors.textLight }}>
-        <h1 className="contact__title" style={{ color: brandColors.accent }}>Contact</h1>
+        <h1 className="contact__title" style={{ color: brandColors.accent }}>{t('contact.title')}</h1>
         <p className="contact__subtitle" style={{ color: brandColors.textMuted }}>
-          Send a message and I will get back to you.
+          {t('contact.subtitle')}
         </p>
       </section>
 
@@ -104,7 +106,7 @@ function Contact() {
           {/* SECTION: NAME FIELD */}
           <div className="contact__field">
             <label htmlFor="name" className="contact__label" style={{ color: brandColors.textDark }}>
-              Name
+              {t('contact.name_label')}
             </label>
             <input
               type="text"
@@ -112,7 +114,7 @@ function Contact() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Your full name"
+              placeholder={t('contact.name_placeholder')}
               className={`contact__input${errors.name ? ' contact__input--error' : ''}`}
               autoComplete="name"
             />
@@ -130,7 +132,7 @@ function Contact() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="your@email.com"
+              placeholder={t('contact.email_placeholder')}
               className={`contact__input${errors.email ? ' contact__input--error' : ''}`}
               autoComplete="email"
             />
@@ -140,14 +142,14 @@ function Contact() {
           {/* SECTION: MESSAGE FIELD */}
           <div className="contact__field">
             <label htmlFor="message" className="contact__label" style={{ color: brandColors.textDark }}>
-              Message
+              {t('contact.message_label')}
             </label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Write your message here..."
+              placeholder={t('contact.message_placeholder')}
               rows={6}
               className={`contact__textarea${errors.message ? ' contact__input--error' : ''}`}
             />
@@ -161,7 +163,7 @@ function Contact() {
             disabled={submitting}
             style={{ backgroundColor: brandColors.accent, color: brandColors.dark }}
           >
-            {submitting ? 'Sending…' : 'Send Message'}
+            {submitting ? t('contact.sending') : t('contact.submit')}
           </button>
 
         </form>
