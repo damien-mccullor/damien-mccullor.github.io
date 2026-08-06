@@ -1,22 +1,26 @@
 /*
  * LOGIC BRIEFING:
  * Footer — Site-wide footer rendered on every page via Layout.
- * Three-column layout: BGFF.png logo on left, contact info in center, BGFF.png logo on right.
- * Replace placeholder email and social URLs with actual values before committing.
- * No Supabase calls. No state. Static presentational component.
+ * Three-column layout: logo on left, contact info in center, logo on right.
+ * Switches logo between BGFF (light mode) and WGFF (dark mode) based on active theme.
+ * No Supabase calls. Static presentational component.
  * AI tool used for logos: Gemini, ChatGPT, GitHub Copilot.
  */
 
 import { brandColors } from '../constants/brandColors'
-import logoFooter from '../assets/black-background/BGFF.png'
+import { useTheme } from '../context/ThemeContext'
+import logoFooterDark from '../assets/black-background/BGFF.png'
+import logoFooterLight from '../assets/white_background/WGFF.png'
 import './Footer.css'
 
 /* SECTION: COMPONENT */
 function Footer() {
   const year = new Date().getFullYear()
+  const { theme } = useTheme()
+  const logoFooter = theme === 'dark' ? logoFooterLight : logoFooterDark
 
   return (
-    <footer className="footer" style={{ backgroundColor: brandColors.white, color: brandColors.textMuted, borderTop: `1px solid ${brandColors.lightBg}` }}>
+    <footer className="footer" style={{ backgroundColor: 'var(--theme-header)', color: brandColors.textMuted, borderTop: `1px solid var(--theme-border)` }}>
 
       {/* SECTION: LEFT LOGO */}
       <img src={logoFooter} alt="Damien McCullor" className="footer__logo" />

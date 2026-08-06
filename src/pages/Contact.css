@@ -79,12 +79,12 @@
 .contact__input,
 .contact__textarea {
   padding: 0.75rem 1rem;
-  border: 1.5px solid #cccccc;
+  border: 1.5px solid var(--theme-border);
   border-radius: 6px;
   font-size: 0.95rem;
   font-family: inherit;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--theme-surface);
+  color: var(--theme-text);
   transition: border-color 0.15s;
   outline: none;
 }

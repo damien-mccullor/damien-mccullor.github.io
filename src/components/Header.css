@@ -62,6 +62,21 @@
   opacity: 0.75;
 }
 
+.header__theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+
+.header__theme-btn:hover {
+  opacity: 0.7;
+}
+
 .header__logout-btn {
   background: none;
   border: 1px solid currentColor;

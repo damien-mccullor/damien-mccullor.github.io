@@ -115,3 +115,32 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* THEME CSS CUSTOM PROPERTIES — light (default) and dark overrides */
+:root {
+  --theme-bg: #F8F8F8;
+  --theme-surface: #FFFFFF;
+  --theme-text: #111111;
+  --theme-text-muted: #9E9E9E;
+  --theme-border: #cccccc;
+  --theme-header: #FFFFFF;
+  --theme-row-hover: #f5f5f5;
+  --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] {
+  --theme-bg: #111111;     /* brandColors.dark */
+  --theme-surface: #1E1E1E; /* brandColors.midDark */
+  --theme-text: #F5F5F5;   /* brandColors.textLight */
+  --theme-text-muted: #9E9E9E;
+  --theme-border: #333333;
+  --theme-header: #111111; /* brandColors.dark */
+  --theme-row-hover: #2a2a2a;
+}
+
+/* Apply smooth transition to all theme-dependent elements */
+body, .header, .layout__main, section, .links__card,
+.home__skill-card, .portfolio__edu-card, .contact__form,
+.backoffice__table td, .login__card {
+  transition: var(--theme-transition);
+}

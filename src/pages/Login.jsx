@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LOGIC BRIEFING:
  * Login — Secret admin login page at /#/login (not linked in navigation)
  * On mount: checks for an existing Supabase Auth session; redirects to /backoffice if found.
@@ -54,8 +54,8 @@ function Login() {
     <div className="login">
 
       {/* SECTION: LOGIN CARD */}
-      <div className="login__card" style={{ backgroundColor: brandColors.white }}>
-        <h1 className="login__title" style={{ color: brandColors.textDark }}>Admin Login</h1>
+        <div className="login__card" style={{ backgroundColor: 'var(--theme-surface)' }}>
+        <h1 className="login__title" style={{ color: 'var(--theme-text)' }}>Admin Login</h1>
         <p className="login__subtitle" style={{ color: brandColors.textMuted }}>
           This page is not publicly linked.
         </p>
@@ -71,7 +71,7 @@ function Login() {
 
           {/* SECTION: EMAIL FIELD */}
           <div className="login__field">
-            <label htmlFor="email" className="login__label" style={{ color: brandColors.textDark }}>
+            <label htmlFor="email" className="login__label" style={{ color: 'var(--theme-text)' }}>
               Email
             </label>
             <input
@@ -88,7 +88,7 @@ function Login() {
 
           {/* SECTION: PASSWORD FIELD */}
           <div className="login__field">
-            <label htmlFor="password" className="login__label" style={{ color: brandColors.textDark }}>
+            <label htmlFor="password" className="login__label" style={{ color: 'var(--theme-text)' }}>
               Password
             </label>
             <input

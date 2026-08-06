@@ -85,18 +85,18 @@ function Home() {
       </section>
 
       {/* SECTION: TECHNICAL SKILLS */}
-      <section className="home__skills" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="home__section-title" style={{ color: brandColors.textDark }}>{t('home.skills_title')}</h2>
+      <section className="home__skills" style={{ backgroundColor: 'var(--theme-bg)' }}>
+        <h2 className="home__section-title" style={{ color: 'var(--theme-text)' }}>{t('home.skills_title')}</h2>
         {skillCategories.map(({ category, skills }) => (
           <div key={category} className="home__skill-category">
             <h3 className="home__category-label" style={{ color: brandColors.accentDark }}>{category}</h3>
             <div className="home__skill-grid">
               {skills.map(({ name, description, icon }) => (
-                <div key={name} className="home__skill-card" style={{ backgroundColor: brandColors.white }}>
+                <div key={name} className="home__skill-card" style={{ backgroundColor: 'var(--theme-surface)' }}>
                   {/* SECTION: SKILL ICON */}
                   <span className="home__skill-icon" style={{ color: brandColors.accent }}>{icon}</span>
-                  <h4 className="home__skill-name" style={{ color: brandColors.textDark }}>{name}</h4>
-                  <p className="home__skill-desc" style={{ color: brandColors.textMuted }}>{description}</p>
+                  <h4 className="home__skill-name" style={{ color: 'var(--theme-text)' }}>{name}</h4>
+                  <p className="home__skill-desc" style={{ color: 'var(--theme-text-muted)' }}>{description}</p>
                 </div>
               ))}
             </div>

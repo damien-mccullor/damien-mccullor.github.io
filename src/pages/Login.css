@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  background-color: #f8f8f8;
+  background-color: var(--theme-bg);
 }
 
 /* SECTION: LOGIN CARD */
@@ -50,12 +50,12 @@
 
 .login__input {
   padding: 0.75rem 1rem;
-  border: 1.5px solid #cccccc;
+  border: 1.5px solid var(--theme-border);
   border-radius: 6px;
   font-size: 0.95rem;
   font-family: inherit;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--theme-surface);
+  color: var(--theme-text);
   transition: border-color 0.15s;
   outline: none;
 }

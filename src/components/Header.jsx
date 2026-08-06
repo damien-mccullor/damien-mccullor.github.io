@@ -5,15 +5,18 @@
  * Desktop (>768px): logo + horizontal nav links fixed at top.
  * Mobile (≤768px): logo-only header at top; icon-only nav bar fixed at bottom.
  * Login and BackOffice routes are intentionally excluded from navigation.
- * Subscribes to Supabase auth state: shows a Logout button in the header when admin is authenticated.
+ * Subscribes to Supabase auth state: shows a Logout button when admin is authenticated.
+ * Provides EN/FR language switcher and light/dark theme toggle on every page.
  */
 
 import { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { brandColors } from '../constants/brandColors'
 import { useLanguage } from '../context/LanguageContext'
+import { useTheme } from '../context/ThemeContext'
 import supabase from '../lib/supabaseClient'
-import logoHeader from '../assets/black-background/BWG.png'
+import logoHeaderDark from '../assets/black-background/BGUF.png'
+import logoHeaderLight from '../assets/black-background/BGUF.png'
 import './Header.css'
 
 /* SECTION: NAV ITEMS — public pages only; Login and BackOffice excluded */
@@ -38,6 +41,8 @@ function Header() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const navigate = useNavigate()
   const { language, setLanguage, t } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
+  const logoHeader = theme === 'dark' ? logoHeaderLight : logoHeaderDark
 
   /* SECTION: SUBSCRIBE TO AUTH CHANGES — updates logout button visibility */
   useEffect(() => {
@@ -60,7 +65,7 @@ function Header() {
   return (
     <>
       {/* SECTION: DESKTOP HEADER — hidden on mobile via CSS */}
-      <header className="header" style={{ backgroundColor: brandColors.white, borderBottom: `1px solid ${brandColors.lightBg}` }}>
+      <header className="header" style={{ backgroundColor: 'var(--theme-header)', borderBottom: `1px solid var(--theme-border)` }}>
 
         {/* SECTION: LOGO — AI-generated BWG.png inside circular emblem */}
         <NavLink to="/" className="header__logo" aria-label="Damien McCullor — go to home">
@@ -84,18 +89,22 @@ function Header() {
               {t(`nav.${label.toLowerCase()}`)}
             </NavLink>
           ))}
+          {/* theme toggle button — always visible */}
+          <button onClick={toggleTheme} className="header__theme-btn" aria-label="Toggle theme" style={{ color: 'var(--theme-text)' }}>
+            {theme === 'dark' ? '☀' : '☾'}
+          </button>
           {/* language switcher — always visible */}
           <div className="header__lang">
-            <button onClick={() => setLanguage('en')} className={`header__lang-btn${language === 'en' ? ' header__lang-btn--active' : ''}`} style={{ color: brandColors.textDark }}>EN</button>
-            <span className="header__lang-sep" style={{ color: brandColors.textMuted }}>|</span>
-            <button onClick={() => setLanguage('fr')} className={`header__lang-btn${language === 'fr' ? ' header__lang-btn--active' : ''}`} style={{ color: brandColors.textDark }}>FR</button>
+            <button onClick={() => setLanguage('en')} className={`header__lang-btn${language === 'en' ? ' header__lang-btn--active' : ''}`} style={{ color: 'var(--theme-text)' }}>EN</button>
+            <span className="header__lang-sep" style={{ color: 'var(--theme-text-muted)' }}>|</span>
+            <button onClick={() => setLanguage('fr')} className={`header__lang-btn${language === 'fr' ? ' header__lang-btn--active' : ''}`} style={{ color: 'var(--theme-text)' }}>FR</button>
           </div>
           {/* logout button — only visible when admin is authenticated */}
           {isAuthenticated && (
             <button
               onClick={handleLogout}
               className="header__logout-btn"
-              style={{ color: brandColors.textDark }}
+              style={{ color: 'var(--theme-text)' }}
             >
               {t('nav.logout')}
             </button>
@@ -104,7 +113,7 @@ function Header() {
       </header>
 
       {/* SECTION: MOBILE BOTTOM NAV — hidden on desktop via CSS */}
-      <nav className="mobile-nav" aria-label="Mobile navigation" style={{ backgroundColor: brandColors.white, borderTop: `1px solid ${brandColors.lightBg}` }}>
+      <nav className="mobile-nav" aria-label="Mobile navigation" style={{ backgroundColor: 'var(--theme-header)', borderTop: `1px solid var(--theme-border)` }}>
         {navItems.map(({ path, label }) => (
           <NavLink
             key={path}

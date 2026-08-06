@@ -69,7 +69,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | 7 | Login Page | `ai/features/login-page.feature.md` | Complete |
 | 8 | Back Office | `ai/features/back-office.feature.md` | Complete |
 | EM-1 | Languages (EN/FR) | `ai/features/languages.feature.md` | Complete |
-| EM-2 | Light & Dark Mode | `ai/features/light-dark-mode.feature.md` | In Progress |
+| EM-2 | Light & Dark Mode | `ai/features/light-dark-mode.feature.md` | Complete |
 
 ---
 
@@ -86,7 +86,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 | Login Page | [x] | [x] | [x] | Complete |
 | Back Office | [x] | [x] | [x] | Complete |
 | Languages (EN/FR) | [x] | [x] | [x] | Complete |
-| Light & Dark Mode | [x] | [ ] | [ ] | In Progress |
+| Light & Dark Mode | [x] | [x] | [x] | Complete |
 
 ---
 
@@ -229,6 +229,12 @@ damien-mccullor.github.io/
 │   │   └── Layout.css
 │   ├── constants/
 │   │   └── brandColors.js            — brand palette — single source of truth for colors
+│   ├── context/
+│   │   ├── LanguageContext.jsx        — EN/FR i18n provider (useLanguage hook)
+│   │   └── ThemeContext.jsx           — light/dark theme provider (useTheme hook)
+│   ├── i18n/
+│   │   ├── en.json                    — English translation strings
+│   │   └── fr.json                    — French translation strings
 │   ├── lib/
 │   │   └── supabaseClient.js         — Supabase client instance  ✓ created
 │   ├── pages/

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LOGIC BRIEFING:
  * Contact — Public contact form at /#/contact
  * Controlled form with name, email, message fields.
@@ -87,8 +87,8 @@ function Contact() {
       </section>
 
       {/* SECTION: FORM SECTION */}
-      <section className="contact__form-section" style={{ backgroundColor: brandColors.lightBg }}>
-        <form className="contact__form" onSubmit={handleSubmit} noValidate style={{ backgroundColor: brandColors.white }}>
+      <section className="contact__form-section" style={{ backgroundColor: 'var(--theme-bg)' }}>
+        <form className="contact__form" onSubmit={handleSubmit} noValidate style={{ backgroundColor: 'var(--theme-surface)' }}>
 
           {/* SECTION: FEEDBACK MESSAGE */}
           {feedback && (
@@ -105,7 +105,7 @@ function Contact() {
 
           {/* SECTION: NAME FIELD */}
           <div className="contact__field">
-            <label htmlFor="name" className="contact__label" style={{ color: brandColors.textDark }}>
+            <label htmlFor="name" className="contact__label" style={{ color: 'var(--theme-text)' }}>
               {t('contact.name_label')}
             </label>
             <input
@@ -123,7 +123,7 @@ function Contact() {
 
           {/* SECTION: EMAIL FIELD */}
           <div className="contact__field">
-            <label htmlFor="email" className="contact__label" style={{ color: brandColors.textDark }}>
+            <label htmlFor="email" className="contact__label" style={{ color: 'var(--theme-text)' }}>
               Email
             </label>
             <input
@@ -141,7 +141,7 @@ function Contact() {
 
           {/* SECTION: MESSAGE FIELD */}
           <div className="contact__field">
-            <label htmlFor="message" className="contact__label" style={{ color: brandColors.textDark }}>
+            <label htmlFor="message" className="contact__label" style={{ color: 'var(--theme-text)' }}>
               {t('contact.message_label')}
             </label>
             <textarea

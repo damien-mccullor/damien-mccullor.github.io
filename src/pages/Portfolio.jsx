@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LOGIC BRIEFING:
  * Portfolio — Public resume page at /#/portfolio
  * Displays education (degree + certifications), work experience, projects, and a PDF resume download.
@@ -112,22 +112,22 @@ function Portfolio() {
 
       {/* SECTION: EDUCATION */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>{t('portfolio.education_title')}</h2>
+        <h2 className="portfolio__section-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.education_title')}</h2>
 
         {education.map(({ institution, degree, status, dates }) => (
-          <div key={institution} className="portfolio__edu-card" style={{ backgroundColor: brandColors.white }}>
-            <h3 className="portfolio__edu-institution" style={{ color: brandColors.textDark }}>{institution}</h3>
+          <div key={institution} className="portfolio__edu-card" style={{ backgroundColor: 'var(--theme-surface)' }}>
+            <h3 className="portfolio__edu-institution" style={{ color: 'var(--theme-text)' }}>{institution}</h3>
             <p className="portfolio__edu-degree" style={{ color: brandColors.accentDark }}>{degree}</p>
             <p className="portfolio__edu-meta" style={{ color: brandColors.textMuted }}>{status} &nbsp;|&nbsp; {dates}</p>
           </div>
         ))}
 
         {/* SECTION: CERTIFICATIONS */}
-        <h3 className="portfolio__sub-title" style={{ color: brandColors.textDark }}>{t('portfolio.cert_title')}</h3>
+        <h3 className="portfolio__sub-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.cert_title')}</h3>
         <ul className="portfolio__cert-list">
           {certifications.map(({ name, issuer, year }) => (
             <li key={name} className="portfolio__cert-item">
-              <span className="portfolio__cert-name" style={{ color: brandColors.textDark }}>{name}</span>
+              <span className="portfolio__cert-name" style={{ color: 'var(--theme-text)' }}>{name}</span>
               <span className="portfolio__cert-meta" style={{ color: brandColors.textMuted }}>{issuer} &nbsp;|&nbsp; {year}</span>
             </li>
           ))}
@@ -153,16 +153,16 @@ function Portfolio() {
 
       {/* SECTION: PROJECTS */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: brandColors.textDark }}>{t('portfolio.projects_title')}</h2>
+        <h2 className="portfolio__section-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.projects_title')}</h2>
         <div className="portfolio__project-grid">
           {projects.map(({ name, tech, description, image }) => (
-            <div key={name} className="portfolio__project-card" style={{ backgroundColor: brandColors.white }}>
+            <div key={name} className="portfolio__project-card" style={{ backgroundColor: 'var(--theme-surface)' }}>
               {/* image slot filled in SR-7 */}
               {image
                 ? <img src={image} alt={`Screenshot of ${name}`} className="portfolio__project-img" />
                 : <div className="portfolio__project-img-placeholder" style={{ backgroundColor: brandColors.midDark }} />}
               <div className="portfolio__project-body">
-                <h3 className="portfolio__project-name" style={{ color: brandColors.textDark }}>{name}</h3>
+                <h3 className="portfolio__project-name" style={{ color: 'var(--theme-text)' }}>{name}</h3>
                 <ul className="portfolio__project-tech">
                   {tech.map(t => (
                     <li key={t} className="portfolio__project-tag" style={{ backgroundColor: brandColors.dark, color: brandColors.accent }}>{t}</li>

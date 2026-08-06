@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LOGIC BRIEFING:
  * BackOffice — Protected admin dashboard at /#/backoffice
  * Auth guard: checks session on mount; redirects to /login if unauthenticated.
@@ -93,8 +93,8 @@ function BackOffice() {
       </div>
 
       {/* SECTION: MESSAGES PANEL */}
-      <div className="backoffice__content" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="backoffice__subtitle" style={{ color: brandColors.textDark }}>Messages</h2>
+      <div className="backoffice__content" style={{ backgroundColor: 'var(--theme-bg)' }}>
+        <h2 className="backoffice__subtitle" style={{ color: 'var(--theme-text)' }}>Messages</h2>
 
         {/* SECTION: LOADING STATE */}
         {loading && <p className="backoffice__status" style={{ color: brandColors.textMuted }}>Loading messages…</p>}
@@ -122,7 +122,7 @@ function BackOffice() {
               <tbody>
                 {messages.map(msg => (
                   <tr key={msg.id} className="backoffice__row" style={{ backgroundColor: brandColors.white }}>
-                    <td style={{ color: brandColors.textDark }}>{msg.name}</td>
+                    <td style={{ color: 'var(--theme-text)' }}>{msg.name}</td>
                     <td style={{ color: brandColors.textMuted }}>{msg.email}</td>
                     <td style={{ color: brandColors.textMuted }}>{new Date(msg.created_at).toLocaleString()}</td>
                     <td className="backoffice__actions">
@@ -171,11 +171,11 @@ function BackOffice() {
             >
               ✕
             </button>
-            <h3 className="backoffice__modal-title" style={{ color: brandColors.textDark }}>Message from {selectedMessage.name}</h3>
+            <h3 className="backoffice__modal-title" style={{ color: 'var(--theme-text)' }}>Message from {selectedMessage.name}</h3>
             <p className="backoffice__modal-meta" style={{ color: brandColors.textMuted }}>
               {selectedMessage.email} &nbsp;·&nbsp; {new Date(selectedMessage.created_at).toLocaleString()}
             </p>
-            <p className="backoffice__modal-body" style={{ color: brandColors.textDark }}>{selectedMessage.message}</p>
+            <p className="backoffice__modal-body" style={{ color: 'var(--theme-text)' }}>{selectedMessage.message}</p>
           </div>
         </div>
       )}

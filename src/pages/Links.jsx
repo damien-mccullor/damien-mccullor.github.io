@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LOGIC BRIEFING:
  * Links — Public links page at /#/links
  * Displays 3 professional link cards each with an AI-generated image, title, description, and external URL.
@@ -35,7 +35,7 @@ function Links() {
       </section>
 
       {/* SECTION: LINK CARDS */}
-      <section className="links__grid-section" style={{ backgroundColor: brandColors.lightBg }}>
+      <section className="links__grid-section" style={{ backgroundColor: 'var(--theme-bg)' }}>
         <div className="links__grid">
           {linkItems.map(({ key, url, image, alt }) => (
             <a
@@ -44,11 +44,11 @@ function Links() {
               target="_blank"
               rel="noopener noreferrer"
               className="links__card"
-              style={{ backgroundColor: brandColors.white }}
+              style={{ backgroundColor: 'var(--theme-surface)' }}
             >
               <img src={image} alt={alt} className="links__card-img" />
               <div className="links__card-body">
-                <h2 className="links__card-title" style={{ color: brandColors.textDark }}>{t(`links.${key}_title`)}</h2>
+                <h2 className="links__card-title" style={{ color: 'var(--theme-text)' }}>{t(`links.${key}_title`)}</h2>
                 <p className="links__card-desc" style={{ color: brandColors.textMuted }}>{t(`links.${key}_desc`)}</p>
                 <span className="links__card-cta" style={{ color: brandColors.accentDark }}>{t('links.visit')}</span>
               </div>
