@@ -33,9 +33,11 @@ function Footer() {
           <a
             href="mailto:damien.mccullor@yahoo.com"
             className="footer__email"
-            style={{ color: brandColors.accentDark }}
+            aria-label="Send email to Damien McCullor"
+            style={{ fill: brandColors.accentDark }}
           >
-            damien.mccullor@yahoo.com
+            {/* envelope icon — email address intentionally not in DOM to prevent scraping */}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
 

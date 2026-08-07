@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003057"/>
+      <stop offset="100%" stop-color="#004f8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)" rx="8"/>
+  <!-- Badge hexagon -->
+  <polygon points="200,62 226,77 226,107 200,122 174,107 174,77" fill="none" stroke="#00BCEB" stroke-width="3"/>
+  <polygon points="200,70 220,81 220,103 200,114 180,103 180,81" fill="#00BCEB" opacity="0.15"/>
+  <!-- Check mark inside badge -->
+  <polyline points="188,92 197,101 213,84" stroke="#00BCEB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Bar chart below badge -->
+  <rect x="162" y="148" width="12" height="28" fill="#00BCEB" opacity="0.6" rx="2"/>
+  <rect x="180" y="138" width="12" height="38" fill="#00BCEB" opacity="0.8" rx="2"/>
+  <rect x="198" y="130" width="12" height="46" fill="#00BCEB" rx="2"/>
+  <rect x="216" y="142" width="12" height="34" fill="#00BCEB" opacity="0.7" rx="2"/>
+  <rect x="234" y="150" width="12" height="26" fill="#00BCEB" opacity="0.5" rx="2"/>
+  <!-- Labels -->
+  <text x="200" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#00BCEB" letter-spacing="1">DATA ANALYTICS ESSENTIALS</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#00BCEB" opacity="0.7" letter-spacing="1">CISCO · CREDLY BADGE</text>
+</svg>

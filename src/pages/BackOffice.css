@@ -106,6 +106,14 @@
 .backoffice__actions {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+
+/* actions cell must not clip its buttons */
+.backoffice__table td.backoffice__actions {
+  overflow: visible;
+  white-space: normal;
+  vertical-align: middle;
 }
 
 .backoffice__btn {

@@ -94,6 +94,12 @@
   border-color: #B8860B;
 }
 
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: var(--theme-text-muted);
+  opacity: 1;
+}
+
 .contact__input--error {
   border-color: #c0392b;
 }

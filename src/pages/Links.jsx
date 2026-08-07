@@ -1,7 +1,7 @@
 ﻿/*
  * LOGIC BRIEFING:
  * Links — Public links page at /#/links
- * Displays 3 professional link cards each with an AI-generated image, title, description, and external URL.
+ * Displays 6 professional link cards each with an image, title, description, and external URL.
  * All cards open links in a new tab. No Supabase calls. Static presentational page.
  * Uses useLanguage() to render translated titles, descriptions, and labels.
  */
@@ -11,13 +11,19 @@ import { useLanguage } from '../context/LanguageContext'
 import imgLinkedIn from '../assets/images/Link_LinkedIn.svg'
 import imgResume from '../assets/images/Link_Resume.svg'
 import imgGitHub from '../assets/images/Link_GitHub.svg'
+import imgPython from '../assets/images/Link_Python.svg'
+import imgReactNative from '../assets/images/Link_ReactNative.svg'
+import imgCisco from '../assets/images/Link_Cisco.svg'
 import './Links.css'
 
 /* SECTION: LINK CONFIG — keys into translation files; images and URLs are static */
 const linkItems = [
-  { key: 'linkedin', url: 'https://www.linkedin.com/in/damien-mccullor/', image: imgLinkedIn, alt: 'LinkedIn profile page for Damien McCullor' },
-  { key: 'resume',   url: 'https://www.linkedin.com/in/damien-mccullor/overlay/1785702504929/single-media-viewer/?profileId=ACoAAEESn9ABRYXm6p6tiLkdlwy9eiy9F1CqmcQ', image: imgResume, alt: 'Resume document for Damien McCullor on LinkedIn' },
-  { key: 'github',   url: 'https://github.com/damien-mccullor', image: imgGitHub, alt: 'GitHub profile for damien-mccullor' },
+  { key: 'linkedin',    url: 'https://www.linkedin.com/in/damien-mccullor/', image: imgLinkedIn, alt: 'LinkedIn profile page for Damien McCullor' },
+  { key: 'resume',      url: 'https://www.linkedin.com/in/damien-mccullor/overlay/1785702504929/single-media-viewer/?profileId=ACoAAEESn9ABRYXm6p6tiLkdlwy9eiy9F1CqmcQ', image: imgResume, alt: 'Resume document for Damien McCullor on LinkedIn' },
+  { key: 'github',      url: 'https://github.com/damien-mccullor', image: imgGitHub, alt: 'GitHub profile for damien-mccullor' },
+  { key: 'python',      url: 'https://www.youtube.com/watch?v=wUSDVGivd-8&t=17263s', image: imgPython, alt: 'Python for Data Analytics full course on YouTube' },
+  { key: 'reactnative', url: 'https://www.youtube.com/watch?v=0-S5a0eXPoc', image: imgReactNative, alt: 'React Native tutorial for beginners on YouTube' },
+  { key: 'cisco',       url: 'https://www.credly.com/badges/5f4e4f46-8241-4934-b323-fd40a2e260d6/public_url', image: imgCisco, alt: 'Cisco Data Analytics Essentials badge on Credly' },
 ]
 
 function Links() {

@@ -21,6 +21,12 @@ const education = [
     status: 'Junior — In Progress',
     dates: 'Jan 2026 – Expected May 2027',
   },
+  {
+    institution: 'CodeBoxx Academy',
+    degree: 'Full Stack Developer Program',
+    status: 'In Progress — Certificate of Completion',
+    dates: 'Dec 2025 – Aug 2026',
+  },
 ]
 
 const certifications = [
@@ -112,7 +118,7 @@ function Portfolio() {
 
       {/* SECTION: EDUCATION */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.education_title')}</h2>
+        <h2 className="portfolio__section-title" style={{ color: brandColors.dark }}>{t('portfolio.education_title')}</h2>
 
         {education.map(({ institution, degree, status, dates }) => (
           <div key={institution} className="portfolio__edu-card" style={{ backgroundColor: 'var(--theme-surface)' }}>
@@ -153,7 +159,7 @@ function Portfolio() {
 
       {/* SECTION: PROJECTS */}
       <section className="portfolio__section" style={{ backgroundColor: brandColors.lightBg }}>
-        <h2 className="portfolio__section-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.projects_title')}</h2>
+        <h2 className="portfolio__section-title" style={{ color: brandColors.dark }}>{t('portfolio.projects_title')}</h2>
         <div className="portfolio__project-grid">
           {projects.map(({ name, tech, description, image }) => (
             <div key={name} className="portfolio__project-card" style={{ backgroundColor: 'var(--theme-surface)' }}>

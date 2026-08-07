@@ -1,7 +1,7 @@
 /*
  * LOGIC BRIEFING:
  * Home — Public landing page at /#/
- * Displays introduction, technical skills (4 categories × 14 skills), soft skills (7 talents), and at least 2 AI-generated images.
+ * Displays introduction, technical skills (4 categories × 17 skills), soft skills (7 talents), and at least 2 AI-generated images.
  * Uses useLanguage() to render all user-facing text in the selected language.
  * No Supabase calls. No state.
  */
@@ -16,18 +16,21 @@ import './Home.css'
 const skillIcons = {
   javascript:     <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="2"/><text x="6" y="17" fontSize="10" fontWeight="bold" fill="#F7DF1E" fontFamily="monospace">JS</text></svg>,
   python:         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9.3 2 7 3.1 7 4.5V7h5v1H5.5C4.1 8 3 10.3 3 13s1.1 5 2.5 5H7v-2.5C7 14.1 9.3 13 12 13s5 1.1 5 2.5V18h1.5c1.4 0 2.5-2.3 2.5-5s-1.1-5-2.5-5H17V5c0-1.5-2.2-3-5-3zm-1.5 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 14a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>,
+  html:           <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="4,2 6,20 12,22 18,20 20,2" fill="none" stroke="currentColor" strokeWidth="1.5"/><polyline points="8,7 8,13 12,14 16,13 16,7" fill="none" stroke="currentColor" strokeWidth="1.3"/><line x1="8" y1="10" x2="16" y2="10" stroke="currentColor" strokeWidth="1.3"/></svg>,
   react:          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" strokeWidth="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(120 12 12)"/></svg>,
   react_native:   <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="9" y1="19" x2="15" y2="19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>,
   nodejs:         <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 20,7 20,17 12,22 4,17 4,7" fill="none" stroke="currentColor" strokeWidth="1.5"/><text x="8.5" y="15" fontSize="7" fontWeight="bold" fill="currentColor" fontFamily="monospace">N</text></svg>,
   mongodb:        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 6 8 6 12c0 3.3 1.8 6.1 4.5 7.5L12 22l1.5-2.5C16.2 18.1 18 15.3 18 12c0-4-2-10-6-10z" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>,
   mongoose:       <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="8" rx="8" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M4 8v4c0 1.7 3.6 3 8 3s8-1.3 8-3V8" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M4 12v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>,
   mysql:          <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="2.5" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M4 6v5c0 1.4 3.6 2.5 8 2.5S20 12.4 20 11V6" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M4 11v5c0 1.4 3.6 2.5 8 2.5S20 17.4 20 16v-5" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>,
+  supabase:       <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="7" rx="7" ry="2.5" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M5 7v5c0 1.4 3.1 2.5 7 2.5S19 13.4 19 12V7" fill="none" stroke="currentColor" strokeWidth="1.5"/><polyline points="12,14.5 9,19 12,17.5 15,22 12,14.5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/></svg>,
   aws:            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 14.5C4 14 2 12 2 9.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 10 3.5c0 2.5-2 4.5-4.5 5" fill="none" stroke="currentColor" strokeWidth="1.5"/><polyline points="8,17 12,21 16,17" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="12" y1="12" x2="12" y2="21" stroke="currentColor" strokeWidth="1.5"/></svg>,
   git:            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2" fill="none" stroke="currentColor" strokeWidth="1.5"/><circle cx="18" cy="6" r="2" fill="none" stroke="currentColor" strokeWidth="1.5"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M8 18h6" stroke="currentColor" strokeWidth="1.5"/><path d="M16 8v8" stroke="currentColor" strokeWidth="1.5"/></svg>,
   github_actions: <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.5"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>,
   tableau:        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="12" width="4" height="9" fill="none" stroke="currentColor" strokeWidth="1.5"/><rect x="10" y="7" width="4" height="14" fill="none" stroke="currentColor" strokeWidth="1.5"/><rect x="17" y="3" width="4" height="18" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>,
   excel:          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" strokeWidth="1.5"/><line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" strokeWidth="1.5"/><line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" strokeWidth="1.5"/><line x1="15" y1="3" x2="15" y2="21" stroke="currentColor" strokeWidth="1.5"/></svg>,
   dbeaver:        <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="2.5" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M4 5v14c0 1.4 3.6 2.5 8 2.5S20 20.4 20 19V5" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" strokeWidth="1"/></svg>,
+  ai_native:      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" strokeWidth="0.75" strokeDasharray="2 2"/></svg>,
 }
 
 const softSkillIcons = {
@@ -42,10 +45,10 @@ const softSkillIcons = {
 
 /* SECTION: STATIC CATEGORY STRUCTURE — skill keys per category */
 const categoryKeys = [
-  { cat: 'languages',        skills: ['javascript', 'python'] },
+  { cat: 'languages',        skills: ['javascript', 'python', 'html'] },
   { cat: 'frontend_mobile',  skills: ['react', 'react_native'] },
-  { cat: 'backend_database', skills: ['nodejs', 'mongodb', 'mongoose', 'mysql'] },
-  { cat: 'cloud_tools',      skills: ['aws', 'git', 'github_actions', 'tableau', 'excel', 'dbeaver'] },
+  { cat: 'backend_database', skills: ['nodejs', 'mongodb', 'mongoose', 'mysql', 'supabase'] },
+  { cat: 'cloud_tools',      skills: ['aws', 'git', 'github_actions', 'tableau', 'excel', 'dbeaver', 'ai_native'] },
 ]
 
 const softSkillKeys = ['communication', 'leadership', 'teamwork', 'problem_solving', 'adaptability', 'critical_thinking', 'continuous_learning']
@@ -94,7 +97,7 @@ function Home() {
               {skills.map(({ name, description, icon }) => (
                 <div key={name} className="home__skill-card" style={{ backgroundColor: 'var(--theme-surface)' }}>
                   {/* SECTION: SKILL ICON */}
-                  <span className="home__skill-icon" style={{ color: brandColors.accent }}>{icon}</span>
+                  <span className="home__skill-icon" style={{ color: 'var(--theme-icon-color)' }}>{icon}</span>
                   <h4 className="home__skill-name" style={{ color: 'var(--theme-text)' }}>{name}</h4>
                   <p className="home__skill-desc" style={{ color: 'var(--theme-text-muted)' }}>{description}</p>
                 </div>

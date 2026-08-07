@@ -104,6 +104,11 @@
   color: var(--theme-text);
 }
 
+[data-theme="dark"] .portfolio__cert-item {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 .portfolio__cert-name {
   font-size: 0.925rem;
   font-weight: 500;

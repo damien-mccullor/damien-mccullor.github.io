@@ -20,18 +20,21 @@
     "skills": {
       "javascript": { "name": "JavaScript", "desc": "A versatile core scripting language used across full-stack web and mobile application development to build dynamic front-end interfaces and asynchronous backend services." },
       "python": { "name": "Python", "desc": "A powerful object-oriented language utilized for backend application logic, data processing, scripting, and foundational automation tasks." },
+      "html": { "name": "HTML", "desc": "The foundational markup language of the web, used to structure content, define semantic elements, and provide the building blocks for every web application interface." },
       "react": { "name": "React", "desc": "A component-based JavaScript library applied to construct responsive, state-managed user interfaces and modular single-page web applications." },
       "react_native": { "name": "React Native", "desc": "A cross-platform framework used to develop native iOS and Android mobile applications using JavaScript and streamlined component architectures." },
       "nodejs": { "name": "Node.js", "desc": "A server-side JavaScript runtime environment used to build fast RESTful APIs, manage server workflows, and process backend application logic." },
       "mongodb": { "name": "MongoDB", "desc": "A flexible NoSQL document database used to store semi-structured JSON-like data in scalable web application environments." },
       "mongoose": { "name": "Mongoose", "desc": "An Object Data Modeling (ODM) library for Node.js and MongoDB used to manage schemas, enforce data structures, and simplify CRUD operations." },
       "mysql": { "name": "MySQL (SQL)", "desc": "A relational database management system using Structured Query Language to design structured schemas, execute queries, and maintain data integrity." },
+      "supabase": { "name": "Supabase", "desc": "An open-source Backend-as-a-Service platform used for real-time database management, authentication, and serverless API generation built on PostgreSQL." },
       "aws": { "name": "AWS", "desc": "A cloud computing platform used for deploying, hosting, and managing web applications in cloud environments." },
       "git": { "name": "Git", "desc": "A distributed version control system applied to manage feature branches, track source code history, and collaborate securely." },
       "github_actions": { "name": "GitHub Actions", "desc": "A CI/CD platform utilized to automate testing, build workflows, and streamline software deployments directly within GitHub." },
       "tableau": { "name": "Tableau", "desc": "An industry-standard data visualization tool applied to transform raw database queries into interactive dashboards and operational metrics." },
       "excel": { "name": "Excel", "desc": "A foundational spreadsheet tool used for initial data cleanup, quick numerical audits, and structural data organization." },
-      "dbeaver": { "name": "DBeaver", "desc": "A universal database administration tool used to connect directly to databases, execute custom SQL scripts, and inspect schema structures visually." }
+      "dbeaver": { "name": "DBeaver", "desc": "A universal database administration tool used to connect directly to databases, execute custom SQL scripts, and inspect schema structures visually." },
+      "ai_native": { "name": "AI Native Development", "desc": "A development methodology that integrates AI tools (GitHub Copilot, ChatGPT, Gemini) throughout the software lifecycle — from specification writing and code generation to debugging and documentation." }
     },
     "soft_skills": {
       "communication": { "name": "Communication", "desc": "Translating complex technical concepts clearly for teammates and non-technical stakeholders. Applied in writing clear documentation, explaining system architecture, and collaborating on requirements." },
@@ -64,6 +67,12 @@
     "resume_desc": "Full-stack software engineer resume hosted on LinkedIn, including technical projects, Python certifications, military leadership experience, and cybersecurity coursework.",
     "github_title": "GitHub Profile",
     "github_desc": "Open source project repositories including React Native mobile apps, Java Spring Boot REST APIs, and MERN stack applications. View commit history and code quality.",
+    "python_title": "Python for Data Analytics",
+    "python_desc": "The beginner course that launched the Python certification journey — fundamentals of data analysis, programming logic, and the foundation for all languages that followed.",
+    "reactnative_title": "React Native for Beginners",
+    "reactnative_desc": "Next step in mobile development — learning React Native core concepts, component architecture, and cross-platform app building from the ground up.",
+    "cisco_title": "Data Analytics Essentials — Cisco",
+    "cisco_desc": "Verified Credly badge for completing the Cisco Networking Academy Data Analytics Essentials course — covering data analysis fundamentals, visualization, and statistical thinking.",
     "visit": "Visit →"
   },
   "contact": {

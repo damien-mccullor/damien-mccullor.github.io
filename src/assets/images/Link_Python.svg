@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)" rx="8"/>
+  <!-- Python blue snake body top -->
+  <path d="M170 80 C170 65 180 58 200 58 C220 58 236 65 236 80 L236 110 C236 118 229 124 220 124 L180 124 C171 124 164 130 164 139 L164 155" stroke="#4B8BBE" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Python yellow snake body bottom -->
+  <path d="M230 180 C230 195 220 202 200 202 C180 202 164 195 164 180 L164 150 C164 142 171 136 180 136 L220 136 C229 136 236 130 236 121 L236 105" stroke="#FFD43B" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Blue head dot -->
+  <circle cx="200" cy="58" r="7" fill="#4B8BBE"/>
+  <!-- Yellow head dot -->
+  <circle cx="200" cy="202" r="7" fill="#FFD43B"/>
+  <!-- Label -->
+  <text x="200" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFD43B" letter-spacing="1">PYTHON · DATA ANALYTICS</text>
+</svg>

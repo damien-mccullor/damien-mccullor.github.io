@@ -125,6 +125,7 @@ img {
   --theme-border: #cccccc;
   --theme-header: #FFFFFF;
   --theme-row-hover: #f5f5f5;
+  --theme-icon-color: #111111;
   --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
@@ -136,6 +137,7 @@ img {
   --theme-border: #333333;
   --theme-header: #111111; /* brandColors.dark */
   --theme-row-hover: #2a2a2a;
+  --theme-icon-color: #FFD700; /* brandColors.accent — gold on dark */
 }
 
 /* Apply smooth transition to all theme-dependent elements */
