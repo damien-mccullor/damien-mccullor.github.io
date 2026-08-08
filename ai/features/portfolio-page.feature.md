@@ -118,6 +118,12 @@ Build the public portfolio page at `/#/portfolio`. The page presents Damien McCu
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

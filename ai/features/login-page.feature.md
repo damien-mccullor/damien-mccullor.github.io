@@ -113,6 +113,12 @@ Build a secret admin login page at `/#/login`. The route is not in the navigatio
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

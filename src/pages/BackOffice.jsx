@@ -125,22 +125,24 @@ function BackOffice() {
                     <td style={{ color: 'var(--theme-text)' }}>{msg.name}</td>
                     <td style={{ color: brandColors.textMuted }}>{msg.email}</td>
                     <td style={{ color: brandColors.textMuted }}>{new Date(msg.created_at).toLocaleString()}</td>
-                    <td className="backoffice__actions">
-                      <button
-                        className="backoffice__btn backoffice__btn--view"
-                        onClick={() => setSelectedMessage(msg)}
-                        style={{ backgroundColor: brandColors.accent, color: brandColors.dark }}
-                      >
-                        View
-                      </button>
-                      <button
-                        className="backoffice__btn backoffice__btn--delete"
-                        onClick={() => handleDelete(msg.id)}
-                        disabled={deletingIds.has(msg.id)}
-                        style={{ backgroundColor: brandColors.midDark, color: brandColors.textLight }}
-                      >
-                        Delete
-                      </button>
+                    <td>
+                      <div className="backoffice__actions">
+                        <button
+                          className="backoffice__btn backoffice__btn--view"
+                          onClick={() => setSelectedMessage(msg)}
+                          style={{ backgroundColor: brandColors.accent, color: brandColors.dark }}
+                        >
+                          View
+                        </button>
+                        <button
+                          className="backoffice__btn backoffice__btn--delete"
+                          onClick={() => handleDelete(msg.id)}
+                          disabled={deletingIds.has(msg.id)}
+                          style={{ backgroundColor: brandColors.midDark, color: brandColors.textLight }}
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}

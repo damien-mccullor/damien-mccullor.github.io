@@ -117,6 +117,12 @@ Establish the complete project infrastructure: a scaffolded React + Vite applica
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

@@ -124,6 +124,12 @@ Build the public contact page at `/#/contact`. The page presents a form with nam
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

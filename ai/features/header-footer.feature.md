@@ -137,3 +137,25 @@ Establish the persistent site-wide layout: a sticky header with the AI-generated
 7. The visitor clicks a nav link (e.g., Portfolio) â€” the URL updates to `/#/portfolio` and the Portfolio stub renders inside the Layout without a page reload.
 8. The visitor scrolls down on a long page â€” the header remains visible due to sticky/fixed positioning.
 9. The visitor resizes the browser window across the 768px breakpoint â€” layout shifts between desktop and mobile nav without breaking any content.
+
+---
+
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
+## Implementation Log
+
+| Requirement | File | Date | Status |
+|---|---|---|---|
+
+---
+
+## Standards Applied
+
+- LOGIC BRIEFING block on every new file
+- SECTION comments throughout all modified files
+- get_errors run on all modified files — zero errors
+- Lessons-learned files read before pre-commit

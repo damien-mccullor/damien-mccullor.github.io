@@ -129,7 +129,7 @@ function Portfolio() {
         ))}
 
         {/* SECTION: CERTIFICATIONS */}
-        <h3 className="portfolio__sub-title" style={{ color: 'var(--theme-text)' }}>{t('portfolio.cert_title')}</h3>
+        <h3 className="portfolio__sub-title" style={{ color: brandColors.dark }}>{t('portfolio.cert_title')}</h3>
         <ul className="portfolio__cert-list">
           {certifications.map(({ name, issuer, year }) => (
             <li key={name} className="portfolio__cert-item">

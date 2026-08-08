@@ -121,6 +121,12 @@ Build the protected admin back office at `/#/backoffice`. Unauthenticated users 
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

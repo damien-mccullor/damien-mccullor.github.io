@@ -37,7 +37,7 @@ Add a site-wide light/dark theme toggle accessible on every page. The theme syst
 
 ---
 
-## Sub-Requirements
+## Sub-Requirements (Feature Breakdown)
 
 - **SR-1 — Spec file**
 - **SR-2 — CSS custom properties** — define `--color-bg`, `--color-surface`, `--color-text-primary`, `--color-text-muted`, `--color-border` for `:root` (light) and `[data-theme="dark"]` in `index.css`.
@@ -45,6 +45,37 @@ Add a site-wide light/dark theme toggle accessible on every page. The theme syst
 - **SR-4 — Apply to `<html>`** — `main.jsx` wraps app in `ThemeProvider`; theme value sets `data-theme` attribute on `document.documentElement`.
 - **SR-5 — Toggle button in Header** — sun/moon icon toggle accessible on every page.
 - **SR-6 — CSS updates** — All CSS files updated to use CSS vars for background and text colors.
+
+---
+
+## Interfaces (Pages, Endpoints, Screens)
+
+### Frontend
+
+- `src/components/Header.jsx` — theme toggle button added
+- `src/index.css` — CSS custom properties defined for light and dark modes
+- `src/context/ThemeContext.jsx` — new provider file
+- `src/main.jsx` — app wrapped in `ThemeProvider`
+- All page and component CSS files updated to use CSS vars
+
+### Backend / API
+
+N/A — no backend; theme is client-side only.
+
+---
+
+## Data Used or Modified
+
+- `localStorage` key `theme` — persists `'light'` or `'dark'` across sessions
+- `data-theme` attribute on `<html>` element — activates CSS custom property overrides
+
+---
+
+## Tech Constraints (Feature-Level)
+
+- CSS custom properties only — no CSS-in-JS or third-party theming library
+- No OS `prefers-color-scheme` detection — user explicitly selects via toggle
+- Theme toggle must be accessible on every page (lives in `Header.jsx`)
 
 ---
 
@@ -69,7 +100,13 @@ Add a site-wide light/dark theme toggle accessible on every page. The theme syst
 
 ---
 
-### Implementation Log
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
+## Implementation Log
 
 | Requirement | File | Date | Status |
 |---|---|---|---|
@@ -83,7 +120,7 @@ Add a site-wide light/dark theme toggle accessible on every page. The theme syst
 
 ---
 
-### Standards Applied
+## Standards Applied
 
 - LOGIC BRIEFING block on every new file (`ThemeContext.jsx`)
 - SECTION comments throughout all modified files

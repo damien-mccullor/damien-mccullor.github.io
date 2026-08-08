@@ -114,6 +114,12 @@ Build the public landing page at the root URL (`/`). The page presents Damien Mc
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |

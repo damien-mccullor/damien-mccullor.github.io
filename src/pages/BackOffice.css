@@ -109,13 +109,6 @@
   align-items: center;
 }
 
-/* actions cell must not clip its buttons */
-.backoffice__table td.backoffice__actions {
-  overflow: visible;
-  white-space: normal;
-  vertical-align: middle;
-}
-
 .backoffice__btn {
   padding: 0.35rem 0.85rem;
   border: none;

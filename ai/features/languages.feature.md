@@ -37,7 +37,7 @@ Add support for English and French across all user-facing text in the site. A la
 
 ---
 
-## Sub-Requirements
+## Sub-Requirements (Feature Breakdown)
 
 - **SR-1 — Spec file**
 - **SR-2 — Translation files** — `src/i18n/en.json` and `src/i18n/fr.json` with all text keys
@@ -74,6 +74,35 @@ Add support for English and French across all user-facing text in the site. A la
 
 ---
 
+## Interfaces (Pages, Endpoints, Screens)
+
+### Frontend
+
+- `src/components/Header.jsx` — EN/FR language switcher added
+- `src/pages/Home.jsx`, `Portfolio.jsx`, `Links.jsx`, `Contact.jsx` — all user-facing text replaced with `t()` calls
+
+### Backend / API
+
+N/A — no backend; translation is client-side only.
+
+---
+
+## Data Used or Modified
+
+- `src/i18n/en.json` — English translation key-value pairs
+- `src/i18n/fr.json` — French translation key-value pairs
+- `localStorage` key `language` — persists selected language across sessions
+
+---
+
+## Tech Constraints (Feature-Level)
+
+- No external i18n library — custom `LanguageContext` + dot-notation `t()` resolver only
+- Translation files are plain JSON; no build-time processing required
+- `navigator.language` used for browser default detection (substring match on `'fr'`)
+
+---
+
 ## Acceptance Criteria
 
 - [x] A language switcher (`EN | FR`) is visible in the Header on every page
@@ -93,6 +122,12 @@ Add support for English and French across all user-facing text in the site. A la
 2. Visitor clicks `FR` in the Header — all text switches to French immediately.
 3. Visitor navigates to another page — language remains consistent.
 4. Visitor refreshes the page — language preference is restored from `localStorage`.
+
+---
+
+## Notes for the AI
+
+N/A — feature complete.
 
 ---
 

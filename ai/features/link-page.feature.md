@@ -102,6 +102,12 @@ Build the public links page at `/#/links`. The page displays at least 3 professi
 
 ---
 
+## Notes for the AI
+
+N/A — feature complete.
+
+---
+
 ## Implementation Log
 
 | Requirement | File | Date | Status |
