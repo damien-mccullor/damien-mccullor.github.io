@@ -38,8 +38,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Docs
-docs/
+# Blueprint templates (keep out of version control)
+spec_blueprints/
 
 # Environment variables
 .env

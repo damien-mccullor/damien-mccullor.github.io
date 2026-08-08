@@ -269,10 +269,10 @@ The following files are instructor-provided read-only templates. They must **nev
 
 | File | Purpose |
 |---|---|
-| `docs/AI-SPEC.md` | Blank structural template for `ai/ai-spec.md` — read this to understand required sections |
-| `docs/feature.md` | Blank structural template for `ai/features/*.feature.md` — read this to understand required sections |
+| `spec_blueprints/AI-SPEC.md` | Blank structural template for `ai/ai-spec.md` — read this to understand required sections |
+| `spec_blueprints/feature.md` | Blank structural template for `ai/features/*.feature.md` — read this to understand required sections |
 
-These are reference blueprints only. All actual spec content goes into `ai/ai-spec.md` and `ai/features/*.feature.md`. If the agent is ever about to write to a file in `docs/`, stop immediately and flag it to the user.
+These are reference blueprints only. All actual spec content goes into `ai/ai-spec.md` and `ai/features/*.feature.md`. If the agent is ever about to write to a file in `spec_blueprints/`, stop immediately and flag it to the user.
 
 ---
 
