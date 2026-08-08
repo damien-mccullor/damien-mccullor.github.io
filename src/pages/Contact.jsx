@@ -105,7 +105,7 @@ function Contact() {
 
           {/* SECTION: NAME FIELD */}
           <div className="contact__field">
-            <label htmlFor="name" className="contact__label" style={{ color: 'var(--theme-text)' }}>
+            <label htmlFor="name" className="contact__label">
               {t('contact.name_label')}
             </label>
             <input

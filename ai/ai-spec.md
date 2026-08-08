@@ -32,6 +32,7 @@ Build and deploy a personal portfolio website using React (Vite), integrated wit
 - Login page: secret route, Supabase `signInWithPassword`, redirect to Back Office
 - Back Office: protected route, messages table display, view modal, delete, logout
 - `CONCEPTS.md` file at project root (content is user-owned)
+- `RESEARCH.md` file at project root documenting AI-generated assets and implementation research
 - LeetCode screenshots at `./LeetCode-Challenges/<challenge-name>.png` (user-owned)
 - Elevator pitch scripts at `./docs/script-1.md` and `./docs/script-2.md`
 - Elevator pitch feedback at `./docs/pitch-feedback.md`
@@ -190,12 +191,11 @@ damien-mccullor.github.io/
 │       ├── login-page.feature.md
 │       └── back-office.feature.md
 ├── docs/
-│   ├── AI-SPEC.md                    — blueprint template (never alter)
-│   ├── feature.md                    — blueprint template (never alter)
 │   ├── script-1.md                   — elevator pitch script 1
 │   ├── script-2.md                   — elevator pitch script 2
 │   └── pitch-feedback.md             — feedback on elevator pitch
 ├── LeetCode-Challenges/
+├── RESEARCH.md                      — implementation and AI asset research notes
 │   ├── word-search-ii.png
 │   ├── design-twitter.png
 │   ├── task-scheduler.png
