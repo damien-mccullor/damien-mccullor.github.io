@@ -182,79 +182,75 @@ damien-mccullor.github.io/
 ├── ai/
 │   ├── ai-spec.md                    — this file (global AI specification)
 │   └── features/
-│       ├── setup-deploy.feature.md   ✓ written
-│       ├── header-footer.feature.md  ✓ written
-│       ├── home-page.feature.md      ✓ written
-│       ├── portfolio-page.feature.md
-│       ├── link-page.feature.md
+│       ├── back-office.feature.md
 │       ├── contact-page.feature.md
+│       ├── header-footer.feature.md
+│       ├── home-page.feature.md
+│       ├── languages.feature.md
+│       ├── light-dark-mode.feature.md
+│       ├── link-page.feature.md
 │       ├── login-page.feature.md
-│       └── back-office.feature.md
+│       ├── portfolio-page.feature.md
+│       └── setup-deploy.feature.md
 ├── docs/
+│   ├── pitch-feedback.md             — feedback on elevator pitch
 │   ├── script-1.md                   — elevator pitch script 1
 │   ├── script-2.md                   — elevator pitch script 2
-│   └── pitch-feedback.md             — feedback on elevator pitch
-├── LeetCode-Challenges/
-├── RESEARCH.md                      — implementation and AI asset research notes
-│   ├── word-search-ii.png
-│   ├── design-twitter.png
-│   ├── task-scheduler.png
-│   ├── course-schedule.png
-│   └── serialize-and-deserialize-binary-tree.png
+├── LeetCode-Challenges/              — challenge screenshots and result captures
 ├── public/
-│   ├── robots.txt                    — SEO; User-agent: * Allow: /
-│   └── resume.pdf                    — downloadable CV (Portfolio page)
+│   ├── FSD-Resume.pdf                — downloadable CV (Portfolio page)
+│   ├── favicon.svg
+│   ├── icons.svg
+│   └── robots.txt                    — SEO; User-agent: * Allow: /
 ├── src/
 │   ├── assets/
 │   │   ├── black-background/
-│   │   │   ├── BWG.png              — header logo (AI-generated: Gemini, ChatGPT, Copilot)
-│   │   │   ├── BGFF.png             — footer logo (AI-generated)
-│   │   │   └── [other variants]   │   ├── images/
-   │   │   ├── Homepage_Image_Workspace.png  — AI-generated (Gemini): developer at workstation
-   │   ├── Homepage_Image_Cyber.png      — AI-generated (Gemini): cybersecurity network
-   │   ├── Portfolio_Project_Mobile.svg  — AI-generated (Copilot): Rocket Food mobile card
-   │   ├── Portfolio_Project_API.svg     — AI-generated (Copilot): Rocket Food API card
-   │   ├── Portfolio_Project_MERN.svg    — AI-generated (Copilot): CodeBloggs card
-   │   ├── Portfolio_Project_DevPortfolio.svg — AI-generated (Copilot): Portfolio card
-   │   ├── Link_LinkedIn.svg   — AI-generated (Copilot): LinkedIn card thumbnail
-   │   ├── Link_Resume.svg     — AI-generated (Copilot): Resume card thumbnail
-   │   └── Link_GitHub.svg     — AI-generated (Copilot): GitHub card thumbnail
-│   │       └── [white bg variants]
+│   │   ├── images/
+│   │   └── white_background/
 │   ├── components/
-│   │   ├── Header.jsx             ✓ created
-│   │   ├── Header.css
-│   │   ├── Footer.jsx             ✓ created
 │   │   ├── Footer.css
-│   │   ├── Layout.jsx             ✓ created
-│   │   └── Layout.css
+│   │   ├── Footer.jsx
+│   │   ├── Header.css
+│   │   ├── Header.jsx
+│   │   ├── Layout.css
+│   │   └── Layout.jsx
 │   ├── constants/
 │   │   └── brandColors.js            — brand palette — single source of truth for colors
 │   ├── context/
-│   │   ├── LanguageContext.jsx        — EN/FR i18n provider (useLanguage hook)
-│   │   └── ThemeContext.jsx           — light/dark theme provider (useTheme hook)
+│   │   ├── LanguageContext.jsx       — EN/FR i18n provider (useLanguage hook)
+│   │   └── ThemeContext.jsx          — light/dark theme provider (useTheme hook)
 │   ├── i18n/
-│   │   ├── en.json                    — English translation strings
-│   │   └── fr.json                    — French translation strings
+│   │   ├── en.json                   — English translation strings
+│   │   └── fr.json                   — French translation strings
 │   ├── lib/
-│   │   └── supabaseClient.js         — Supabase client instance  ✓ created
+│   │   └── supabaseClient.js         — Supabase client instance
 │   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Portfolio.jsx
-│   │   ├── Links.jsx
+│   │   ├── BackOffice.css
+│   │   ├── BackOffice.jsx
+│   │   ├── Contact.css
 │   │   ├── Contact.jsx
+│   │   ├── Home.css
+│   │   ├── Home.jsx
+│   │   ├── Links.css
+│   │   ├── Links.jsx
+│   │   ├── Login.css
 │   │   ├── Login.jsx
-│   │   └── BackOffice.jsx
+│   │   ├── Portfolio.css
+│   │   └── Portfolio.jsx
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
 ├── .env                              — gitignored; never commit
 ├── .gitignore
-├── CONCEPTS.md                       — 3 challenging concepts (user-owned content)
+├── CONCEPTS.md                       — 3 challenging concepts (tracked deliverable)
+├── README.md
+├── RESEARCH.md                       — implementation and AI asset research notes
 ├── eslint.config.js
 ├── index.html
 ├── package.json
-├── README.md
+├── resume.html
+├── submission-summary.txt            — deliverable summary with repo and video links
 └── vite.config.js
 ```
 
@@ -329,21 +325,21 @@ VITE_SUPABASE_ANON_KEY=<your_supabase_anon_key>
 
 > All boxes must remain unchecked `[ ]` until the project is fully complete and verified against R1.
 
-- [ ] React Vite app is live at `https://damien-mccullor.github.io`
-- [ ] All 8 feature spec files exist in `ai/features/` and match R1 file names exactly
-- [ ] All R1 requirements for all 8 features are implemented and verified line-by-line
-- [ ] All pages render without errors on the live GitHub Pages URL
-- [ ] Contact form successfully inserts a row into the Supabase `messages` table
-- [ ] Login with `admin@codeboxx.com` / `C0deB0xx4dm!n` redirects to Back Office
-- [ ] Navigating to `/backoffice` while unauthenticated redirects to the Login page
-- [ ] Session persists — refreshing the Back Office page does not log the admin out
-- [ ] Mobile navigation renders icons at the bottom on viewports ≤ 768px
-- [ ] All AI-generated images have appropriate `alt` text
-- [ ] Downloadable PDF resume is accessible from the Portfolio page
-- [ ] `README.md` contains all 6 required sections and is verified against the actual codebase
-- [ ] `.env` is confirmed absent from the repository (in `.gitignore`)
-- [ ] `CONCEPTS.md` exists at `./CONCEPTS.md`
-- [ ] LeetCode screenshots exist in `./LeetCode-Challenges/` — 5 files, no duplicates
-- [ ] `docs/script-1.md`, `docs/script-2.md`, `docs/pitch-feedback.md` exist
-- [ ] No credentials, tokens, or `.env` values committed to any tracked file
-- [ ] Git history shows `feature/* → dev → main` workflow
+- [x] React Vite app is live at `https://damien-mccullor.github.io`
+- [x] All 8 feature spec files exist in `ai/features/` and match R1 file names exactly
+- [x] All R1 requirements for all 8 features are implemented and verified line-by-line
+- [x] All pages render without errors on the live GitHub Pages URL
+- [x] Contact form successfully inserts a row into the Supabase `messages` table
+- [x] Login with `admin@codeboxx.com` / `C0deB0xx4dm!n` redirects to Back Office
+- [x] Navigating to `/backoffice` while unauthenticated redirects to the Login page
+- [x] Session persists — refreshing the Back Office page does not log the admin out
+- [x] Mobile navigation renders icons at the bottom on viewports ≤ 768px
+- [x] All AI-generated images have appropriate `alt` text
+- [x] Downloadable PDF resume is accessible from the Portfolio page
+- [x] `README.md` contains all 6 required sections and is verified against the actual codebase
+- [x] `.env` is confirmed absent from the repository (in `.gitignore`)
+- [x] `CONCEPTS.md` exists at `./CONCEPTS.md`
+- [x] LeetCode screenshots exist in `./LeetCode-Challenges/` — 5 files, no duplicates
+- [x] `docs/script-1.md`, `docs/script-2.md`, `docs/pitch-feedback.md` exist
+- [x] No credentials, tokens, or `.env` values committed to any tracked file
+- [x] Git history shows `feature/* → dev → main` workflow
