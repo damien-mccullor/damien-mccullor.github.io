@@ -22,15 +22,6 @@ function BackOffice() {
   const [deletingIds, setDeletingIds] = useState(new Set())
   const navigate = useNavigate()
 
-  /* SECTION: AUTH GUARD + FETCH ON MOUNT */
-  useEffect(() => {
-    if (!supabase) { navigate('/login', { replace: true }); return }
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!session) { navigate('/login', { replace: true }); return }
-      fetchMessages()
-    })
-  }, [navigate])
-
   /* SECTION: FETCH MESSAGES */
   const fetchMessages = useCallback(async () => {
     setLoading(true)
@@ -46,6 +37,15 @@ function BackOffice() {
       setMessages(data || [])
     }
   }, [])
+
+  /* SECTION: AUTH GUARD + FETCH ON MOUNT */
+  useEffect(() => {
+    if (!supabase) { navigate('/login', { replace: true }); return }
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) { navigate('/login', { replace: true }); return }
+      fetchMessages()
+    })
+  }, [fetchMessages, navigate])
 
   /* SECTION: DELETE MESSAGE — optimistic update with rollback on failure */
   async function handleDelete(id) {

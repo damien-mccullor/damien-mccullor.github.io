@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+
 /*
  * LOGIC BRIEFING:
  * LanguageContext — Global language/translation provider

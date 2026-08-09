@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+
 /*
  * LOGIC BRIEFING:
  * ThemeContext — Global light/dark theme provider
