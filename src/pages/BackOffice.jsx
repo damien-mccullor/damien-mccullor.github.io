@@ -71,25 +71,12 @@ function BackOffice() {
     return () => document.removeEventListener('keydown', onKeyDown)
   }, [selectedMessage])
 
-  /* SECTION: LOGOUT */
-  async function handleLogout() {
-    await supabase.auth.signOut()
-    navigate('/', { replace: true })
-  }
-
   return (
     <div className="backoffice">
 
       {/* SECTION: TOP BAR */}
       <div className="backoffice__topbar" style={{ backgroundColor: brandColors.dark }}>
         <h1 className="backoffice__title" style={{ color: brandColors.accent }}>Back Office</h1>
-        <button
-          className="backoffice__logout"
-          onClick={handleLogout}
-          style={{ backgroundColor: brandColors.midDark, color: brandColors.textLight, border: `1px solid ${brandColors.textMuted}` }}
-        >
-          Logout
-        </button>
       </div>
 
       {/* SECTION: MESSAGES PANEL */}

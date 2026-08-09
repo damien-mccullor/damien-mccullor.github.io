@@ -34,6 +34,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: left;
+  align-items: stretch;
 }
 
 /* SECTION: FEEDBACK MESSAGES */
@@ -70,6 +72,7 @@
   flex-direction: column;
   gap: 0.4rem;
   align-items: flex-start;
+  width: 100%;
 }
 
 .contact__label {
@@ -77,6 +80,7 @@
   font-weight: 600;
   color: var(--theme-text);
   display: block;
+  margin-bottom: 0.25rem;
 }
 
 .contact__input,
@@ -92,6 +96,12 @@
   color: var(--theme-text);
   transition: border-color 0.15s;
   outline: none;
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: var(--theme-text-muted);
+  opacity: 1;
 }
 
 .contact__input:-webkit-autofill,
